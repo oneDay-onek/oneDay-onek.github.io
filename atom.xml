@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>K&#39;s 个人博客 2.00</title>
+  
+  <subtitle>靡不有初，鲜克有终</subtitle>
+  <link href="/blog/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/blog/"/>
+  <updated>2019-09-04T14:48:17.165Z</updated>
+  <id>http://yoursite.com/blog/</id>
+  
+  <author>
+    <name>Bro.K</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>my first article</title>
+    <link href="http://yoursite.com/blog/2019/09/04/my-first-article/"/>
+    <id>http://yoursite.com/blog/2019/09/04/my-first-article/</id>
+    <published>2019-09-04T14:43:21.000Z</published>
+    <updated>2019-09-04T14:48:17.165Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;lalalalalalal&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="测试文章" scheme="http://yoursite.com/blog/tags/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/blog/2019/09/04/hello-world/"/>
+    <id>http://yoursite.com/blog/2019/09/04/hello-world/</id>
+    <published>2019-09-04T06:35:14.387Z</published>
+    <updated>2019-09-04T06:35:14.387Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
