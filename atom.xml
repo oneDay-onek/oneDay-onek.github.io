@@ -6,7 +6,7 @@
   <link href="/oneDay-onek.github.io/atom.xml" rel="self"/>
   
   <link href="https://oneDay-onek.github.io/oneDay-onek.github.io/"/>
-  <updated>2019-09-08T15:07:34.903Z</updated>
+  <updated>2019-09-08T16:14:45.144Z</updated>
   <id>https://oneDay-onek.github.io/oneDay-onek.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://oneDay-onek.github.io/oneDay-onek.github.io/2019/09/05/Js%20Array%20and%20String/"/>
     <id>https://oneDay-onek.github.io/oneDay-onek.github.io/2019/09/05/Js Array and String/</id>
     <published>2019-09-05T14:57:53.000Z</published>
-    <updated>2019-09-08T15:07:34.903Z</updated>
+    <updated>2019-09-08T16:14:45.144Z</updated>
     
     <summary type="html">
     
@@ -38,6 +38,8 @@
     
     </summary>
     
+    
+      <category term="js基础" scheme="https://oneDay-onek.github.io/oneDay-onek.github.io/categories/js%E5%9F%BA%E7%A1%80/"/>
     
     
       <category term="js数组" scheme="https://oneDay-onek.github.io/oneDay-onek.github.io/tags/js%E6%95%B0%E7%BB%84/"/>
