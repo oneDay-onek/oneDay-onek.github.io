@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="K&#39;s 个人博客 2.00">
 <meta property="og:description" content="本文主要介绍js中对数组和字符串的基本操作  一. 数组操作   概念  数组操作分为两类:  会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();  不会改变原数组的方法: .concat(), .slice()。   push()push()方法可向数组的末尾添加一个或多个元素，并返">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-06T07:52:24.699Z">
+<meta property="og:updated_time" content="2019-09-08T15:01:33.037Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Js对数组的一些操作方法">
 <meta name="twitter:description" content="本文主要介绍js中对数组和字符串的基本操作  一. 数组操作   概念  数组操作分为两类:  会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();  不会改变原数组的方法: .concat(), .slice()。   push()push()方法可向数组的末尾添加一个或多个元素，并返">
@@ -374,6 +374,10 @@
 <p>pop()方法用于删除数组的最后一个元素，并返回被删除的元素。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = arr.pop();   <span class="comment">//arr:[1,2,3,4,5]</span></span><br><span class="line">                        <span class="comment">//item:6  ==  返回值为被删除的元素</span></span><br></pre></td></tr></table></figure>
 
+<p>shif()方法用于把数组的第一个元素从其中删除，并返回第一个元素的值.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = arr.shift();     <span class="comment">//arr:[2,3,4,5,6]</span></span><br><span class="line">                            <span class="comment">//item:1  ==  返回值为被删除的元素</span></span><br></pre></td></tr></table></figure>
+
+<p>unshif()</p>
 
       
     </div>
