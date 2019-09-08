@@ -3,11 +3,11 @@
   <title>K&#39;s 个人博客 2.00</title>
   
   <subtitle>靡不有初，鲜克有终</subtitle>
-  <link href="/oneDay-onek.github.io/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="https://oneDay-onek.github.io/oneDay-onek.github.io/"/>
+  <link href="/"/>
   <updated>2019-09-08T16:14:45.144Z</updated>
-  <id>https://oneDay-onek.github.io/oneDay-onek.github.io/</id>
+  <id>/</id>
   
   <author>
     <name>Bro.K</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Js对数组的一些操作方法</title>
-    <link href="https://oneDay-onek.github.io/oneDay-onek.github.io/2019/09/05/Js%20Array%20and%20String/"/>
-    <id>https://oneDay-onek.github.io/oneDay-onek.github.io/2019/09/05/Js Array and String/</id>
+    <link href="/2019/09/05/Js%20Array%20and%20String/"/>
+    <id>/2019/09/05/Js Array and String/</id>
     <published>2019-09-05T14:57:53.000Z</published>
     <updated>2019-09-08T16:14:45.144Z</updated>
     
@@ -39,19 +39,19 @@
     </summary>
     
     
-      <category term="js基础" scheme="https://oneDay-onek.github.io/oneDay-onek.github.io/categories/js%E5%9F%BA%E7%A1%80/"/>
+      <category term="js基础" scheme="/categories/js%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="js数组" scheme="https://oneDay-onek.github.io/oneDay-onek.github.io/tags/js%E6%95%B0%E7%BB%84/"/>
+      <category term="js数组" scheme="/tags/js%E6%95%B0%E7%BB%84/"/>
     
-      <category term="js基础" scheme="https://oneDay-onek.github.io/oneDay-onek.github.io/tags/js%E5%9F%BA%E7%A1%80/"/>
+      <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>my first article</title>
-    <link href="https://oneDay-onek.github.io/oneDay-onek.github.io/2019/09/04/my-first-article/"/>
-    <id>https://oneDay-onek.github.io/oneDay-onek.github.io/2019/09/04/my-first-article/</id>
+    <link href="/2019/09/04/my-first-article/"/>
+    <id>/2019/09/04/my-first-article/</id>
     <published>2019-09-04T14:43:21.000Z</published>
     <updated>2019-09-05T08:20:49.519Z</updated>
     
@@ -70,14 +70,14 @@
     
     
     
-      <category term="测试文章" scheme="https://oneDay-onek.github.io/oneDay-onek.github.io/tags/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+      <category term="测试文章" scheme="/tags/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://oneDay-onek.github.io/oneDay-onek.github.io/2019/09/04/hello-world/"/>
-    <id>https://oneDay-onek.github.io/oneDay-onek.github.io/2019/09/04/hello-world/</id>
+    <link href="/2019/09/04/hello-world/"/>
+    <id>/2019/09/04/hello-world/</id>
     <published>2019-09-04T06:35:14.387Z</published>
     <updated>2019-09-04T06:35:14.387Z</updated>
     
