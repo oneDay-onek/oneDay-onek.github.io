@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Js对数组的一些操作方法]]></title>
+    <url>%2FoneDay-onek.github.io%2F2019%2F09%2F05%2FJs%20Array%20and%20String%2F</url>
+    <content type="text"><![CDATA[本文主要介绍js中对数组和字符串的基本操作 一. 数组操作 概念 数组操作分为两类: 会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort(); 不会改变原数组的方法: .concat(), .slice()。 push()push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。 1234567var arr = [1,2,3,4,5,6];arr.push([7,8]); //arr:[1,2,3,4,5,6,[7,8]] //如果插入的为数组，则插入的这个数组成为arr的最后一项var count = arr.push(9,10); //arr:[1,2,3,4,5,6,[7,8],9,10] //count:9 == 返回值为改变后数组的长度 pop()方法用于删除数组的最后一个元素，并返回被删除的元素。 1234var arr = [1,2,3,4,5,6];var item = arr.pop(); //arr:[1,2,3,4,5] //item:6 == 返回值为被删除的元素]]></content>
+      <tags>
+        <tag>js数组</tag>
+        <tag>js基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[my first article]]></title>
+    <url>%2FoneDay-onek.github.io%2F2019%2F09%2F04%2Fmy-first-article%2F</url>
+    <content type="text"><![CDATA[lalalalalalal 这是一级标题这是二级标题这是三级标题 这是粗体 这不是粗体 百度 短发短发短发 https://www.baidu.com 我从来不梦想，我只是在努力认识现实；戏剧家洪深说：我的梦想是明年吃苦的能力比今年更强；鲁迅说：人生最大的痛苦是梦醒了无路可走；苏格拉底说：人类的幸福和欢乐在于奋斗，而最有价值的是为了理想而奋斗 在Js中通常使用console.log(&quot;&quot;)的方式在控制台打印数据 123function add(a,b) &#123; return a+b;//返回a与b相加的值&#125; 序号 名称 年龄 1 张三 18 2 李四 18 3 王五 18 语文 数学 英语 无序列表 首个title 二级title 有序列表 首个title 二级title 三级title]]></content>
+      <tags>
+        <tag>测试文章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2FoneDay-onek.github.io%2F2019%2F09%2F04%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
