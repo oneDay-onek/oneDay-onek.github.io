@@ -1,28 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[Js对数组的一些操作方法]]></title>
-    <url>%2F2019%2F09%2F05%2FJs%20Array%20and%20String%2F</url>
-    <content type="text"><![CDATA[本文主要介绍js中对数组和字符串的基本操作 一. 数组操作 概念 数组操作分为两类: 会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort(); 不会改变原数组的方法: .concat(), .slice()。 push()push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。 1234567var arr = [1,2,3,4,5,6];arr.push([7,8]); //arr:[1,2,3,4,5,6,[7,8]] //如果插入的为数组，则插入的这个数组成为arr的最后一项var count = arr.push(9,10); //arr:[1,2,3,4,5,6,[7,8],9,10] //count:9 == 返回值为改变后数组的长度 pop()pop()方法用于删除数组的最后一个元素，并返回被删除的元素。 1234var arr = [1,2,3,4,5,6];var item = arr.pop(); //arr:[1,2,3,4,5] //item:6 == 返回值为被删除的元素 shift()shif()方法用于把数组的第一个元素从其中删除，并返回第一个元素的值. 1234var arr = [1,2,3,4,5,6];var item = arr.shift(); //arr:[2,3,4,5,6] //item:1 == 返回值为被删除的元素 unshift()unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度. 1234567var arr = [1,2,3,4,5,6];var count = arr.unshift(1,2); //arr:[1,2,1,2,3,4,5,6] //count:8 == 返回数组的长度var count = arr.unshift([1,2]); //arr:[[1,2],1,2,1,2,3,4,5,6] //count:9 splice()splice() 方法向数组中添加项目(或 向数组中添加项目)，然后返回被删除的项目，返回值为数组。 一句话概括一下：此方法不是单纯的添加或者删除数组中的项，更像是更改数组。从索引为index的项开始（包括index项）往后面找个数length的项，将他们替换为item1…itemX 1语法：arrayObject.splice(index,length,item1,.....,itemX) 参数 描述 index 必填。规定添加（删除）的位置。即从索引为index的项为起点。如果为负数则从倒数项开始。 length 必填。规定删除的项的个数，如果为0则不删除。 item1…itemX 选填。规定添加的项。如果有item1…itemX，则不论是否删除，item1…itemX都会添加到数组。 1234567var arr = [1,2,3,4,5,6];var items = arr.splice(5,1); //arr:[1,2,3,4,5] 此用法表现为删除操作 //items:[6] 返回被删除的项var items = arr.splice(4,1,7,8,9); //arr:[1,2,3,4,7,8,9] 此用法表现为更改操作。从第index为4的项开始的1项删除，并插入 7，8，9 //count:[5] 返回被删除的项 reverse()reverse() 方法用于颠倒数组中元素的顺序，无返回值。 123var arr = [a,b,c,d];arr.reverse(); //arr:[d,c,b,a] sort()sort() 方法用于对数组的元素进行排序，无返回值。 123456789var arr = [1,5,3,2,4];arr.sort(); //arr:[1,2,3,4,5] 完成排序//但是注意，该方法仅用于对数组项为单纯数字的数组进行排序，如果数组的项为字符串，结果可能不为预期var strArr = ['1','12','2','5','300'];strArr.sort(); //strArr:['1','12','2','300','5']]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Js对数组的一些操作方法</title>
+      <link href="/2019/09/05/Js%20Array%20and%20String/"/>
+      <url>/2019/09/05/Js%20Array%20and%20String/</url>
+      
+        <content type="html"><![CDATA[<a id="more"></a><blockquote><p>本文主要介绍js中对数组和字符串的基本操作</p></blockquote><h2 id="一-数组操作"><a href="#一-数组操作" class="headerlink" title="一. 数组操作"></a>一. 数组操作</h2><blockquote><p>  概念</p></blockquote><p>数组操作分为两类:</p><ol><li><p>会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();</p></li><li><p>不会改变原数组的方法: .concat(), .slice()。</p></li></ol><h3 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h3><p>push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line">arr.push([<span class="number">7</span>,<span class="number">8</span>]);  <span class="comment">//arr:[1,2,3,4,5,6,[7,8]]</span></span><br><span class="line">                  <span class="comment">//如果插入的为数组，则插入的这个数组成为arr的最后一项</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.push(<span class="number">9</span>,<span class="number">10</span>);   <span class="comment">//arr:[1,2,3,4,5,6,[7,8],9,10]</span></span><br><span class="line">                              <span class="comment">//count:9  ==  返回值为改变后数组的长度</span></span><br></pre></td></tr></table></figure><h3 id="pop"><a href="#pop" class="headerlink" title="pop()"></a>pop()</h3><p>pop()方法用于删除数组的最后一个元素，并返回被删除的元素。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = arr.pop();   <span class="comment">//arr:[1,2,3,4,5]</span></span><br><span class="line">                        <span class="comment">//item:6  ==  返回值为被删除的元素</span></span><br></pre></td></tr></table></figure><h3 id="shift"><a href="#shift" class="headerlink" title="shift()"></a>shift()</h3><p>shif()方法用于把数组的第一个元素从其中删除，并返回第一个元素的值.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = arr.shift();     <span class="comment">//arr:[2,3,4,5,6]</span></span><br><span class="line">                            <span class="comment">//item:1  ==  返回值为被删除的元素</span></span><br></pre></td></tr></table></figure><h3 id="unshift"><a href="#unshift" class="headerlink" title="unshift()"></a>unshift()</h3><p>unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.unshift(<span class="number">1</span>,<span class="number">2</span>);   <span class="comment">//arr:[1,2,1,2,3,4,5,6]</span></span><br><span class="line">                                <span class="comment">//count:8   ==  返回数组的长度</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.unshift([<span class="number">1</span>,<span class="number">2</span>]);     <span class="comment">//arr:[[1,2],1,2,1,2,3,4,5,6]</span></span><br><span class="line">                                    <span class="comment">//count:9</span></span><br></pre></td></tr></table></figure><h3 id="splice"><a href="#splice" class="headerlink" title="splice()"></a>splice()</h3><p>splice() 方法向数组中添加项目(或 向数组中添加项目)，然后返回被删除的项目，返回值为数组。</p><p><strong>一句话概括一下：此方法不是单纯的添加或者删除数组中的项，更像是更改数组。从索引为index的项开始（包括index项）往后面找个数length的项，将他们替换为item1…itemX</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：arrayObject.splice(index,length,item1,.....,itemX)</span><br></pre></td></tr></table></figure><table><thead><tr><th align="center">参数</th><th align="center">描述</th></tr></thead><tbody><tr><td align="center">index</td><td align="center">必填。规定添加（删除）的位置。即从索引为index的项为起点。如果为负数则从倒数项开始。</td></tr><tr><td align="center">length</td><td align="center">必填。规定删除的项的个数，如果为0则不删除。</td></tr><tr><td align="center">item1…itemX</td><td align="center">选填。规定添加的项。如果有item1…itemX，则不论是否删除，item1…itemX都会添加到数组。</td></tr></tbody></table><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,4,5,6];</span><br><span class="line"></span><br><span class="line">var items = arr.splice(5,1);   //arr:[1,2,3,4,5]    此用法表现为删除操作</span><br><span class="line">                                //items:[6]     返回被删除的项</span><br><span class="line"></span><br><span class="line">var items = arr.splice(4,1,7,8,9);     //arr:[1,2,3,4,7,8,9]    此用法表现为更改操作。从第index为4的项开始的1项删除，并插入 7，8，9</span><br><span class="line">                                    //count:[5]     返回被删除的项</span><br></pre></td></tr></table></figure><h3 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h3><p>reverse() 方法用于颠倒数组中元素的顺序，无返回值。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [a,b,c,d];</span><br><span class="line"></span><br><span class="line">arr.reverse();   <span class="comment">//arr:[d,c,b,a]</span></span><br></pre></td></tr></table></figure><h3 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h3><p>sort() 方法用于对数组的元素进行排序，无返回值。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line">arr.sort();   <span class="comment">//arr:[1,2,3,4,5]     完成排序</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//但是注意，该方法仅用于对数组项为单纯数字的数组进行排序，如果数组的项为字符串，结果可能不为预期</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> strArr = [<span class="string">'1'</span>,<span class="string">'12'</span>,<span class="string">'2'</span>,<span class="string">'5'</span>,<span class="string">'300'</span>];</span><br><span class="line"></span><br><span class="line">strArr.sort();      <span class="comment">//strArr:['1','12','2','300','5']</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
       <categories>
-        <category>js基础</category>
+          
+          <category> js基础 </category>
+          
       </categories>
-      <tags>
-        <tag>js数组</tag>
-        <tag>js基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[my first article]]></title>
-    <url>%2F2019%2F09%2F04%2Fmy-first-article%2F</url>
-    <content type="text"><![CDATA[lalalalalalal 这是一级标题这是二级标题这是三级标题 这是粗体 这不是粗体 百度 短发短发短发 https://www.baidu.com 我从来不梦想，我只是在努力认识现实；戏剧家洪深说：我的梦想是明年吃苦的能力比今年更强；鲁迅说：人生最大的痛苦是梦醒了无路可走；苏格拉底说：人类的幸福和欢乐在于奋斗，而最有价值的是为了理想而奋斗 在Js中通常使用console.log(&quot;&quot;)的方式在控制台打印数据 123function add(a,b) &#123; return a+b;//返回a与b相加的值&#125; 序号 名称 年龄 1 张三 18 2 李四 18 3 王五 18 语文 数学 英语 无序列表 首个title 二级title 有序列表 首个title 二级title 三级title]]></content>
-      <tags>
-        <tag>测试文章</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F09%2F04%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> js数组 </tag>
+            
+            <tag> js基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>my first article</title>
+      <link href="/2019/09/04/my-first-article/"/>
+      <url>/2019/09/04/my-first-article/</url>
+      
+        <content type="html"><![CDATA[<p>lalalalalalal</p><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><p> <strong>这是粗体</strong></p><p> 这不是粗体</p><p>  <a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a></p><p> <del>短发短发短发</del> </p><p><a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a></p><blockquote><p>我从来不梦想，我只是在努力认识现实；戏剧家洪深说：我的梦想是明年吃苦的能力比今年更强；鲁迅说：人生最大的痛苦是梦醒了无路可走；苏格拉底说：人类的幸福和欢乐在于奋斗，而最有价值的是为了理想而奋斗</p></blockquote><p>在Js中通常使用<code>console.log(&quot;&quot;)</code>的方式在控制台打印数据</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a+b;<span class="comment">//返回a与b相加的值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><table><thead><tr><th align="center">序号</th><th align="center">名称</th><th align="center">年龄</th></tr></thead><tbody><tr><td align="center">1</td><td align="center">张三</td><td align="center">18</td></tr><tr><td align="center">2</td><td align="center">李四</td><td align="center">18</td></tr><tr><td align="center">3</td><td align="center">王五</td><td align="center">18</td></tr></tbody></table><ol><li><p>语文</p></li><li><p>数学</p></li><li><p>英语</p></li></ol><ul><li>无序列表<ul><li>首个title<ul><li>二级title</li></ul></li></ul></li></ul><ol><li>有序列表<ol><li>首个title<ol><li>二级title<ol><li>三级title</li></ol></li></ol></li></ol></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 测试文章 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2019/09/04/hello-world/"/>
+      <url>/2019/09/04/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
