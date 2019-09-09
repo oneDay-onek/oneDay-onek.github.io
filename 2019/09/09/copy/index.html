@@ -67,7 +67,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="js基础,深浅拷贝,">
 
 
 
@@ -80,18 +80,20 @@
 
 
 
-<meta name="description" content="个人,博客,个人博客,前端,vue,node,vue.js,node.js">
-<meta name="keywords" content="个人,博客,个人博客,前端,vue,node,vue.js,node.js">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="/categories/index.html">
+<meta name="description" content="js中 对象和数组的深浅拷贝 一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：  var a = 1; var b = a;  // b:1   简单赋值 b = 2；      //a:1,b:2   即使改变b的值，也不会影响a 这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了深">
+<meta name="keywords" content="js基础,深浅拷贝">
+<meta property="og:type" content="article">
+<meta property="og:title" content="copy">
+<meta property="og:url" content="/2019/09/09/copy/index.html">
 <meta property="og:site_name" content="K&#39;s 个人博客 2.00">
-<meta property="og:description" content="个人,博客,个人博客,前端,vue,node,vue.js,node.js">
+<meta property="og:description" content="js中 对象和数组的深浅拷贝 一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：  var a = 1; var b = a;  // b:1   简单赋值 b = 2；      //a:1,b:2   即使改变b的值，也不会影响a 这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了深">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-08T16:17:21.683Z">
+<meta property="og:image" content="/09/copy/about_old.jpg">
+<meta property="og:updated_time" content="2019-09-09T16:03:54.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
-<meta name="twitter:description" content="个人,博客,个人博客,前端,vue,node,vue.js,node.js">
+<meta name="twitter:title" content="copy">
+<meta name="twitter:description" content="js中 对象和数组的深浅拷贝 一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：  var a = 1; var b = a;  // b:1   简单赋值 b = 2；      //a:1,b:2   即使改变b的值，也不会影响a 这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了深">
+<meta name="twitter:image" content="/09/copy/about_old.jpg">
 
 
 
@@ -121,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="/categories/">
+  <link rel="canonical" href="/2019/09/09/copy/">
 
 
 
 
 
-  <title>分类 | K's 个人博客 2.00</title>
+  <title>copy | K's 个人博客 2.00</title>
   
 
 
@@ -272,40 +274,228 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="/2019/09/09/copy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bro.K">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/person_icon.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="K's 个人博客 2.00">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">分类</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 1 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/js基础/">js基础</a><span class="category-list-count">2</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">copy</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-09T21:59:59+08:00">
+                2019-09-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js基础/" itemprop="url" rel="index">
+                    <span itemprop="name">js基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_value_page_pv"></span>次阅读
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p><img src="/09/copy/about_old.jpg" alt></p>
+<h2 id="js中-对象和数组的深浅拷贝"><a href="#js中-对象和数组的深浅拷贝" class="headerlink" title="js中 对象和数组的深浅拷贝"></a>js中 对象和数组的深浅拷贝</h2><blockquote>
+<p>一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：</p>
+</blockquote>
+<pre><code>var a = 1;
+var b = a;  // b:1   简单赋值
+b = 2；      //a:1,b:2   即使改变b的值，也不会影响a</code></pre><blockquote>
+<p>这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了深浅拷贝的问题，下面会介绍到。</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="一、数据类型"><a href="#一、数据类型" class="headerlink" title="一、数据类型"></a>一、数据类型</h3><p>js中有基本数据类型和引用（复杂）数据类型两种。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 其中：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1） 基本数据类型: Number（数值）、String（字符串）、Boolean（布尔）、null、undefined、symbol（es6中出现的新类型，用于当作唯一标识，此处不过多赘述）。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2） 引用数据类型: Object（对象）。</p>
+<ol>
+<li>基本数据类型的赋值<br>正如在文章开头说到的那样，基本数据类型用简单的 = 就能完成赋值。是因为简单数据类型在定义时，会在内存中重新开辟空间来存放新的变量，在内存之中存在着新旧两个变量的空间，互不影响。</li>
+<li>引用数据类型的赋值</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]; <span class="comment">//arr1为数组</span></span><br><span class="line"><span class="keyword">var</span> arr2 = arr1;  <span class="comment">//将arr1的值赋给arr2，arr2:[1,2,3]</span></span><br><span class="line"></span><br><span class="line">arr2.push(<span class="number">4</span>);  <span class="comment">//改变arr2的值,</span></span><br><span class="line">               <span class="comment">//arr1:[1,2,3,4],arr1的值也被改变</span></span><br></pre></td></tr></table></figure>
+
+<p>在此处arr1与arr2指向的是内存中的同一地址，知识赋值了地址。</p>
+<p>因此，引用数据类型之间的赋值不能使用简单的复制，此处就涉及到了浅拷贝和深拷贝。</p>
+<h3 id="二、深浅拷贝"><a href="#二、深浅拷贝" class="headerlink" title="二、深浅拷贝"></a>二、深浅拷贝</h3><p>在对象/数组中，浅拷贝只是复制了某个对象的指针，而不是对象本身。深拷贝则是创建一个和原对象一摸一样的对象，两个对象之间互不影响。</p>
+<ol>
+<li>浅拷贝</li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 浅拷贝只是对基本数据类型的拷贝。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> b = a; <span class="comment">//b:1</span></span><br><span class="line">b = <span class="number">2</span>; <span class="comment">//a:1,b:2</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 对于引用数据类型来说这样的简单赋值不可行，但如果 数组/对象 的 项/属性 也是基本数据类型，那么可以使用遍历的方式来进行赋值而两个数组/对象之间互不影响。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;arr1.length;i++)&#123;</span><br><span class="line">    arr2[i] = arr1[i];  <span class="comment">//arr1的每一项都是number基本数据类型，可以使用这样的方式进行赋值.</span></span><br><span class="line">&#125;  <span class="comment">//arr2:[1,2,3]</span></span><br><span class="line"></span><br><span class="line">arr2[<span class="number">0</span>] = <span class="number">4</span>; <span class="comment">//arr1:[1,2,3]</span></span><br><span class="line">             <span class="comment">//arr2:[4,2,3]</span></span><br><span class="line">             <span class="comment">//改变了arr2，arr1的值并没有改变</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>深拷贝<br>&nbsp;&nbsp;&nbsp;&nbsp; 如果是下面这种情况，简单的遍历赋值也无法实现深拷贝。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>]];</span><br><span class="line"><span class="keyword">var</span> arr2 = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;arr1.length;i++)&#123;</span><br><span class="line">    arr2[i] = arr1[i];  </span><br><span class="line">&#125;  <span class="comment">//arr2:[1,2,[3,4]]</span></span><br><span class="line"></span><br><span class="line">arr2[<span class="number">2</span>][<span class="number">1</span>] = <span class="number">5</span>; <span class="comment">//arr1:[1,2,[3,5]]</span></span><br><span class="line">             <span class="comment">//arr2:[1,2,[3,5]]</span></span><br><span class="line">             <span class="comment">//改变了arr2中引用数据类型项的值，arr1的值跟着改变了。</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">    a:<span class="number">1</span>,</span><br><span class="line">    b:<span class="number">2</span>,</span><br><span class="line">    c:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(obj1).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;</span><br><span class="line"> obj2[key] = obj1[key];</span><br><span class="line">&#125;);  <span class="comment">//obj2:&#123;a:1,b:2,c:[1,2,3]&#125;</span></span><br><span class="line"></span><br><span class="line">obj2.c[<span class="number">0</span>] = <span class="number">4</span>; <span class="comment">//obj2:&#123;a:1,b:2,c:[4,2,3]&#125;</span></span><br><span class="line">             <span class="comment">//obj1:&#123;a:1,b:2,c:[4,2,3]&#125;</span></span><br><span class="line">             <span class="comment">//改变了obj2中引用数据类型项的值，obj1的值跟着改变了。</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 所以此时介绍两个起到深拷贝作用的方法：concat()、$.extend()</p>
+<blockquote>
+<p>concat（）、$.extend()方对用途不止如此，此处讨论深拷贝的方法，不对其他功能过多阐述</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)concat()</p>
+<blockquote>
+<p>concat()方法用来对数组进行深拷贝操作</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [].concat(arr1);  <span class="comment">//arr2:[1,2,3]</span></span><br><span class="line"></span><br><span class="line">arr2[<span class="number">0</span>] = <span class="number">0</span>;  <span class="comment">//arr2 = [0,2,3]</span></span><br><span class="line">              <span class="comment">//arr1 = [1,2,3]  arr1并未受到影响</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)$.extend()</p>
+<blockquote>
+<p>$.extend()方法用来对对象进行深拷贝操作</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">    a:<span class="number">1</span>,</span><br><span class="line">    b:<span class="number">2</span>,</span><br><span class="line">    c:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> obj2 = $.extend(&#123;&#125;,obj1);  <span class="comment">//obj2:&#123;a:1,b:2,c:[1,2,3]&#125;</span></span><br><span class="line"></span><br><span class="line">obj2.c[<span class="number">0</span>] = <span class="number">0</span>;  <span class="comment">//obj2:&#123;a:1,b:2,c:[0,2,3]&#125;</span></span><br><span class="line">              <span class="comment">//obj1:&#123;a:1,b:2,c:[1,2,3]&#125;  obj1并未受到影响</span></span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js基础/" rel="tag"># js基础</a>
+          
+            <a href="/tags/深浅拷贝/" rel="tag"># 深浅拷贝</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/05/Js Array and String/" rel="next" title="Js对数组的一些操作方法">
+                <i class="fa fa-chevron-left"></i> Js对数组的一些操作方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -338,8 +528,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -408,6 +607,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#js中-对象和数组的深浅拷贝"><span class="nav-text">js中 对象和数组的深浅拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、数据类型"><span class="nav-text">一、数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、深浅拷贝"><span class="nav-text">二、深浅拷贝</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

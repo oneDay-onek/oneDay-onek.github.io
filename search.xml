@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[copy]]></title>
+    <url>%2F2019%2F09%2F09%2Fcopy%2F</url>
+    <content type="text"><![CDATA[js中 对象和数组的深浅拷贝 一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如： var a = 1; var b = a; // b:1 简单赋值 b = 2； //a:1,b:2 即使改变b的值，也不会影响a 这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了深浅拷贝的问题，下面会介绍到。 一、数据类型js中有基本数据类型和引用（复杂）数据类型两种。 &nbsp;&nbsp;&nbsp;&nbsp; 其中： &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1） 基本数据类型: Number（数值）、String（字符串）、Boolean（布尔）、null、undefined、symbol（es6中出现的新类型，用于当作唯一标识，此处不过多赘述）。 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2） 引用数据类型: Object（对象）。 基本数据类型的赋值正如在文章开头说到的那样，基本数据类型用简单的 = 就能完成赋值。是因为简单数据类型在定义时，会在内存中重新开辟空间来存放新的变量，在内存之中存在着新旧两个变量的空间，互不影响。 引用数据类型的赋值 12345var arr1 = [1,2,3]; //arr1为数组var arr2 = arr1; //将arr1的值赋给arr2，arr2:[1,2,3]arr2.push(4); //改变arr2的值, //arr1:[1,2,3,4],arr1的值也被改变 在此处arr1与arr2指向的是内存中的同一地址，知识赋值了地址。 因此，引用数据类型之间的赋值不能使用简单的复制，此处就涉及到了浅拷贝和深拷贝。 二、深浅拷贝在对象/数组中，浅拷贝只是复制了某个对象的指针，而不是对象本身。深拷贝则是创建一个和原对象一摸一样的对象，两个对象之间互不影响。 浅拷贝 &nbsp;&nbsp;&nbsp;&nbsp; 浅拷贝只是对基本数据类型的拷贝。 123var a = 1;var b = a; //b:1b = 2; //a:1,b:2 &nbsp;&nbsp;&nbsp;&nbsp; 对于引用数据类型来说这样的简单赋值不可行，但如果 数组/对象 的 项/属性 也是基本数据类型，那么可以使用遍历的方式来进行赋值而两个数组/对象之间互不影响。 12345678910var arr1 = [1,2,3];var arr2 = [];for (let i = 0;i&lt;arr1.length;i++)&#123; arr2[i] = arr1[i]; //arr1的每一项都是number基本数据类型，可以使用这样的方式进行赋值.&#125; //arr2:[1,2,3]arr2[0] = 4; //arr1:[1,2,3] //arr2:[4,2,3] //改变了arr2，arr1的值并没有改变 深拷贝&nbsp;&nbsp;&nbsp;&nbsp; 如果是下面这种情况，简单的遍历赋值也无法实现深拷贝。 12345678910var arr1 = [1,2,[3,4]];var arr2 = [];for (let i = 0;i&lt;arr1.length;i++)&#123; arr2[i] = arr1[i]; &#125; //arr2:[1,2,[3,4]]arr2[2][1] = 5; //arr1:[1,2,[3,5]] //arr2:[1,2,[3,5]] //改变了arr2中引用数据类型项的值，arr1的值跟着改变了。 1234567891011121314var obj1 = &#123; a:1, b:2, c:[1,2,3]&#125;;var obj2 = &#123;&#125;;Object.keys(obj1).forEach(function(key)&#123; obj2[key] = obj1[key];&#125;); //obj2:&#123;a:1,b:2,c:[1,2,3]&#125;obj2.c[0] = 4; //obj2:&#123;a:1,b:2,c:[4,2,3]&#125; //obj1:&#123;a:1,b:2,c:[4,2,3]&#125; //改变了obj2中引用数据类型项的值，obj1的值跟着改变了。 &nbsp;&nbsp;&nbsp;&nbsp; 所以此时介绍两个起到深拷贝作用的方法：concat()、$.extend() concat（）、$.extend()方对用途不止如此，此处讨论深拷贝的方法，不对其他功能过多阐述 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)concat() concat()方法用来对数组进行深拷贝操作 12345var arr1 = [1,2,3];var arr2 = [].concat(arr1); //arr2:[1,2,3]arr2[0] = 0; //arr2 = [0,2,3] //arr1 = [1,2,3] arr1并未受到影响 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)$.extend() $.extend()方法用来对对象进行深拷贝操作 123456789var obj1 = &#123; a:1, b:2, c:[1,2,3]&#125;;var obj2 = $.extend(&#123;&#125;,obj1); //obj2:&#123;a:1,b:2,c:[1,2,3]&#125;obj2.c[0] = 0; //obj2:&#123;a:1,b:2,c:[0,2,3]&#125; //obj1:&#123;a:1,b:2,c:[1,2,3]&#125; obj1并未受到影响]]></content>
+      <categories>
+        <category>js基础</category>
+      </categories>
+      <tags>
+        <tag>js基础</tag>
+        <tag>深浅拷贝</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Js对数组的一些操作方法]]></title>
     <url>%2F2019%2F09%2F05%2FJs%20Array%20and%20String%2F</url>
     <content type="text"><![CDATA[本文主要介绍js中对数组和字符串的基本操作 一. 数组操作 概念 数组操作分为两类: 会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort(); 不会改变原数组的方法: .concat(), .slice()。 push()push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。 1234567var arr = [1,2,3,4,5,6];arr.push([7,8]); //arr:[1,2,3,4,5,6,[7,8]] //如果插入的为数组，则插入的这个数组成为arr的最后一项var count = arr.push(9,10); //arr:[1,2,3,4,5,6,[7,8],9,10] //count:9 == 返回值为改变后数组的长度 pop()pop()方法用于删除数组的最后一个元素，并返回被删除的元素。 1234var arr = [1,2,3,4,5,6];var item = arr.pop(); //arr:[1,2,3,4,5] //item:6 == 返回值为被删除的元素 shift()shif()方法用于把数组的第一个元素从其中删除，并返回第一个元素的值. 1234var arr = [1,2,3,4,5,6];var item = arr.shift(); //arr:[2,3,4,5,6] //item:1 == 返回值为被删除的元素 unshift()unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度. 1234567var arr = [1,2,3,4,5,6];var count = arr.unshift(1,2); //arr:[1,2,1,2,3,4,5,6] //count:8 == 返回数组的长度var count = arr.unshift([1,2]); //arr:[[1,2],1,2,1,2,3,4,5,6] //count:9 splice()splice() 方法向数组中添加项目(或 向数组中添加项目)，然后返回被删除的项目，返回值为数组。 一句话概括一下：此方法不是单纯的添加或者删除数组中的项，更像是更改数组。从索引为index的项开始（包括index项）往后面找个数length的项，将他们替换为item1…itemX 1语法：arrayObject.splice(index,length,item1,.....,itemX) 参数 描述 index 必填。规定添加（删除）的位置。即从索引为index的项为起点。如果为负数则从倒数项开始。 length 必填。规定删除的项的个数，如果为0则不删除。 item1…itemX 选填。规定添加的项。如果有item1…itemX，则不论是否删除，item1…itemX都会添加到数组。 1234567var arr = [1,2,3,4,5,6];var items = arr.splice(5,1); //arr:[1,2,3,4,5] 此用法表现为删除操作 //items:[6] 返回被删除的项var items = arr.splice(4,1,7,8,9); //arr:[1,2,3,4,7,8,9] 此用法表现为更改操作。从第index为4的项开始的1项删除，并插入 7，8，9 //count:[5] 返回被删除的项 reverse()reverse() 方法用于颠倒数组中元素的顺序，无返回值。 123var arr = [a,b,c,d];arr.reverse(); //arr:[d,c,b,a] sort()sort() 方法用于对数组的元素进行排序，无返回值。 123456789var arr = [1,5,3,2,4];arr.sort(); //arr:[1,2,3,4,5] 完成排序//但是注意，该方法仅用于对数组项为单纯数字的数组进行排序，如果数组的项为字符串，结果可能不为预期var strArr = ['1','12','2','5','300'];strArr.sort(); //strArr:['1','12','2','300','5']]]></content>
@@ -8,8 +20,8 @@
         <category>js基础</category>
       </categories>
       <tags>
-        <tag>js数组</tag>
         <tag>js基础</tag>
+        <tag>js数组</tag>
       </tags>
   </entry>
   <entry>

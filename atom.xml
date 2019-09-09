@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-09T13:51:36.226Z</updated>
+  <updated>2019-09-09T16:03:54.244Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>copy</title>
+    <link href="/2019/09/09/copy/"/>
+    <id>/2019/09/09/copy/</id>
+    <published>2019-09-09T13:59:59.000Z</published>
+    <updated>2019-09-09T16:03:54.244Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/09/copy/about_old.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;h2 id=&quot;js中-对象和数组的深浅拷贝&quot;&gt;&lt;a href=&quot;#js中-对象和数组的深浅拷贝&quot; class=&quot;headerlink&quot; title=&quot;js中 对象和数组的深浅拷贝&quot;&gt;&lt;/a&gt;js中 对象和数组的深浅拷贝&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;var a = 1;
+var b = a;  // b:1   简单赋值
+b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了深浅拷贝的问题，下面会介绍到。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="js基础" scheme="/categories/js%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="深浅拷贝" scheme="/tags/%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>Js对数组的一些操作方法</title>
@@ -47,9 +78,9 @@
       <category term="js基础" scheme="/categories/js%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="js数组" scheme="/tags/js%E6%95%B0%E7%BB%84/"/>
-    
       <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="js数组" scheme="/tags/js%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -58,18 +89,19 @@
     <link href="/2019/09/04/my-first-article/"/>
     <id>/2019/09/04/my-first-article/</id>
     <published>2019-09-04T14:43:21.000Z</published>
-    <updated>2019-09-05T08:20:49.519Z</updated>
+    <updated>2019-09-09T13:54:46.928Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;lalalalalalal&lt;/p&gt;
-&lt;h1 id=&quot;这是一级标题&quot;&gt;&lt;a href=&quot;#这是一级标题&quot; class=&quot;headerlink&quot; title=&quot;这是一级标题&quot;&gt;&lt;/a&gt;这是一级标题&lt;/h1&gt;&lt;h2 id=&quot;这是二级标题&quot;&gt;&lt;a href=&quot;#这是二级标题&quot;
-        
-      
+      &lt;p&gt;lalalalalalal&lt;/p&gt;
+&lt;h1 id=&quot;这是一级标题&quot;&gt;&lt;a href=&quot;#这是一级标题&quot; class=&quot;headerlink&quot; title=&quot;这是一级标题&quot;&gt;&lt;/a&gt;这是一级标题&lt;/h1&gt;&lt;h2 id=&quot;这是二级标题&quot;&gt;&lt;a href=&quot;#这是二级标题&quot; class=&quot;headerlink&quot; title=&quot;这是二级标题&quot;&gt;&lt;/a&gt;这是二级标题&lt;/h2&gt;&lt;h3 id=&quot;这是三级标题&quot;&gt;&lt;a href=&quot;#这是三级标题&quot; class=&quot;headerlink&quot; title=&quot;这是三级标题&quot;&gt;&lt;/a&gt;这是三级标题&lt;/h3&gt;&lt;p&gt; &lt;strong&gt;这是粗体&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; 这不是粗体&lt;/p&gt;
+&lt;p&gt;  &lt;a href=&quot;https://www.baidu.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;百度&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;del&gt;短发短发短发&lt;/del&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.baidu.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.baidu.com&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我从来不梦想，我只是在努力认识现实；戏剧家洪深说：我的梦想是明年吃苦的能力比今年更强；鲁迅说：人生最大的痛苦是梦醒了无路可走；苏格拉底说：人类的幸福和欢乐在于奋斗，而最有价值的是为了理想而奋斗&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     

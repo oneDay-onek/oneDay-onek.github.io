@@ -284,6 +284,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="/2019/09/09/copy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bro.K">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/person_icon.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="K's 个人博客 2.00">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/09/copy/" itemprop="url">copy</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-09T21:59:59+08:00">
+                2019-09-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js基础/" itemprop="url" rel="index">
+                    <span itemprop="name">js基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="/09/copy/about_old.jpg" alt></p>
+<h2 id="js中-对象和数组的深浅拷贝"><a href="#js中-对象和数组的深浅拷贝" class="headerlink" title="js中 对象和数组的深浅拷贝"></a>js中 对象和数组的深浅拷贝</h2><blockquote>
+<p>一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：</p>
+</blockquote>
+<pre><code>var a = 1;
+var b = a;  // b:1   简单赋值
+b = 2；      //a:1,b:2   即使改变b的值，也不会影响a</code></pre><blockquote>
+<p>这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了深浅拷贝的问题，下面会介绍到。</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/09/copy/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/2019/09/05/Js Array and String/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -518,8 +674,7 @@
 
       
         
-          
-            <p>lalalalalalal</p>
+          <p>lalalalalalal</p>
 <h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><p> <strong>这是粗体</strong></p>
 <p> 这不是粗体</p>
 <p>  <a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a></p>
@@ -528,64 +683,13 @@
 <blockquote>
 <p>我从来不梦想，我只是在努力认识现实；戏剧家洪深说：我的梦想是明年吃苦的能力比今年更强；鲁迅说：人生最大的痛苦是梦醒了无路可走；苏格拉底说：人类的幸福和欢乐在于奋斗，而最有价值的是为了理想而奋斗</p>
 </blockquote>
-<p>在Js中通常使用<code>console.log(&quot;&quot;)</code>的方式在控制台打印数据</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a+b;<span class="comment">//返回a与b相加的值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="center">序号</th>
-<th align="center">名称</th>
-<th align="center">年龄</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">1</td>
-<td align="center">张三</td>
-<td align="center">18</td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="center">李四</td>
-<td align="center">18</td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="center">王五</td>
-<td align="center">18</td>
-</tr>
-</tbody></table>
-<ol>
-<li><p>语文</p>
-</li>
-<li><p>数学</p>
-</li>
-<li><p>英语</p>
-</li>
-</ol>
-<ul>
-<li>无序列表<ul>
-<li>首个title<ul>
-<li>二级title</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>有序列表<ol>
-<li>首个title<ol>
-<li>二级title<ol>
-<li>三级title</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/04/my-first-article/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -801,7 +905,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -823,7 +927,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
