@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-09T10:06:36.400Z</updated>
+  <updated>2019-09-09T13:51:36.226Z</updated>
   <id>/</id>
   
   <author>
@@ -21,21 +21,25 @@
     <link href="/2019/09/05/Js%20Array%20and%20String/"/>
     <id>/2019/09/05/Js Array and String/</id>
     <published>2019-09-05T14:57:53.000Z</published>
-    <updated>2019-09-09T10:06:36.400Z</updated>
+    <updated>2019-09-09T13:51:36.226Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;本文主要介绍js中对数组和字符串的基本操作&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;一-数组操作&quot;&gt;&lt;a href=&quot;#一-数组操作&quot; class=&quot;headerlink&quot; title=&quot;一.
-        
-      
+&lt;h2 id=&quot;一-数组操作&quot;&gt;&lt;a href=&quot;#一-数组操作&quot; class=&quot;headerlink&quot; title=&quot;一. 数组操作&quot;&gt;&lt;/a&gt;一. 数组操作&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;  概念&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;数组操作分为两类:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;不会改变原数组的方法: .concat(), .slice()。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;push&quot;&gt;&lt;a href=&quot;#push&quot; class=&quot;headerlink&quot; title=&quot;push()&quot;&gt;&lt;/a&gt;push()&lt;/h3&gt;&lt;p&gt;push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; arr = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;arr.push([&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;]);  &lt;span class=&quot;comment&quot;&gt;//arr:[1,2,3,4,5,6,[7,8]]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                  &lt;span class=&quot;comment&quot;&gt;//如果插入的为数组，则插入的这个数组成为arr的最后一项&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; count = arr.push(&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;);   &lt;span class=&quot;comment&quot;&gt;//arr:[1,2,3,4,5,6,[7,8],9,10]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                              &lt;span class=&quot;comment&quot;&gt;//count:9  ==  返回值为改变后数组的长度&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

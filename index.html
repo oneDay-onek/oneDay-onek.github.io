@@ -378,9 +378,7 @@
 
       
         
-          
-            <a id="more"></a>
-<blockquote>
+          <blockquote>
 <p>本文主要介绍js中对数组和字符串的基本操作</p>
 </blockquote>
 <h2 id="一-数组操作"><a href="#一-数组操作" class="headerlink" title="一. 数组操作"></a>一. 数组操作</h2><blockquote>
@@ -395,50 +393,13 @@
 </ol>
 <h3 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h3><p>push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line">arr.push([<span class="number">7</span>,<span class="number">8</span>]);  <span class="comment">//arr:[1,2,3,4,5,6,[7,8]]</span></span><br><span class="line">                  <span class="comment">//如果插入的为数组，则插入的这个数组成为arr的最后一项</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.push(<span class="number">9</span>,<span class="number">10</span>);   <span class="comment">//arr:[1,2,3,4,5,6,[7,8],9,10]</span></span><br><span class="line">                              <span class="comment">//count:9  ==  返回值为改变后数组的长度</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="pop"><a href="#pop" class="headerlink" title="pop()"></a>pop()</h3><p>pop()方法用于删除数组的最后一个元素，并返回被删除的元素。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = arr.pop();   <span class="comment">//arr:[1,2,3,4,5]</span></span><br><span class="line">                        <span class="comment">//item:6  ==  返回值为被删除的元素</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="shift"><a href="#shift" class="headerlink" title="shift()"></a>shift()</h3><p>shif()方法用于把数组的第一个元素从其中删除，并返回第一个元素的值.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = arr.shift();     <span class="comment">//arr:[2,3,4,5,6]</span></span><br><span class="line">                            <span class="comment">//item:1  ==  返回值为被删除的元素</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="unshift"><a href="#unshift" class="headerlink" title="unshift()"></a>unshift()</h3><p>unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.unshift(<span class="number">1</span>,<span class="number">2</span>);   <span class="comment">//arr:[1,2,1,2,3,4,5,6]</span></span><br><span class="line">                                <span class="comment">//count:8   ==  返回数组的长度</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.unshift([<span class="number">1</span>,<span class="number">2</span>]);     <span class="comment">//arr:[[1,2],1,2,1,2,3,4,5,6]</span></span><br><span class="line">                                    <span class="comment">//count:9</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="splice"><a href="#splice" class="headerlink" title="splice()"></a>splice()</h3><p>splice() 方法向数组中添加项目(或 向数组中添加项目)，然后返回被删除的项目，返回值为数组。</p>
-<p><strong>一句话概括一下：此方法不是单纯的添加或者删除数组中的项，更像是更改数组。从索引为index的项开始（包括index项）往后面找个数length的项，将他们替换为item1…itemX</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：arrayObject.splice(index,length,item1,.....,itemX)</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="center">参数</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">index</td>
-<td align="center">必填。规定添加（删除）的位置。即从索引为index的项为起点。如果为负数则从倒数项开始。</td>
-</tr>
-<tr>
-<td align="center">length</td>
-<td align="center">必填。规定删除的项的个数，如果为0则不删除。</td>
-</tr>
-<tr>
-<td align="center">item1…itemX</td>
-<td align="center">选填。规定添加的项。如果有item1…itemX，则不论是否删除，item1…itemX都会添加到数组。</td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,4,5,6];</span><br><span class="line"></span><br><span class="line">var items = arr.splice(5,1);   //arr:[1,2,3,4,5]    此用法表现为删除操作</span><br><span class="line">                                //items:[6]     返回被删除的项</span><br><span class="line"></span><br><span class="line">var items = arr.splice(4,1,7,8,9);     //arr:[1,2,3,4,7,8,9]    此用法表现为更改操作。从第index为4的项开始的1项删除，并插入 7，8，9</span><br><span class="line">                                    //count:[5]     返回被删除的项</span><br></pre></td></tr></table></figure>
-
-<h3 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h3><p>reverse() 方法用于颠倒数组中元素的顺序，无返回值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [a,b,c,d];</span><br><span class="line"></span><br><span class="line">arr.reverse();   <span class="comment">//arr:[d,c,b,a]</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h3><p>sort() 方法用于对数组的元素进行排序，无返回值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line">arr.sort();   <span class="comment">//arr:[1,2,3,4,5]     完成排序</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//但是注意，该方法仅用于对数组项为单纯数字的数组进行排序，如果数组的项为字符串，结果可能不为预期</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> strArr = [<span class="string">'1'</span>,<span class="string">'12'</span>,<span class="string">'2'</span>,<span class="string">'5'</span>,<span class="string">'300'</span>];</span><br><span class="line"></span><br><span class="line">strArr.sort();      <span class="comment">//strArr:['1','12','2','300','5']</span></span><br></pre></td></tr></table></figure>
-
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/05/Js Array and String/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
