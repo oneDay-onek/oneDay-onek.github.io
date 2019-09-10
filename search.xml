@@ -1,120 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>多个axios如何进行同步请求</title>
-      <link href="/2019/09/10/%E5%A4%9A%E4%B8%AAaxios%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%90%8C%E6%AD%A5%E8%AF%B7%E6%B1%82/"/>
-      <url>/2019/09/10/%E5%A4%9A%E4%B8%AAaxios%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%90%8C%E6%AD%A5%E8%AF%B7%E6%B1%82/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[多个axios如何进行同步请求]]></title>
+    <url>%2F2019%2F09%2F10%2F%E5%A4%9A%E4%B8%AAaxios%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%90%8C%E6%AD%A5%E8%AF%B7%E6%B1%82%2F</url>
+    <content type="text"></content>
       <categories>
-          
-          <category> vue组件化开发 </category>
-          
+        <category>vue组件化开发</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> vue组件化开发 </tag>
-            
-            <tag> axios </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>js中变量的深浅拷贝</title>
-      <link href="/2019/09/09/copy/"/>
-      <url>/2019/09/09/copy/</url>
-      
-        <content type="html"><![CDATA[<img src="/09/copy/about_old.jpg" width="800px"><img src="/09/copy/09/09/copy/about_old.jpg"><h2 id="js中-对象和数组的深浅拷贝"><a href="#js中-对象和数组的深浅拷贝" class="headerlink" title="js中 对象和数组的深浅拷贝"></a>js中 对象和数组的深浅拷贝</h2><blockquote><p>一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：</p></blockquote><pre><code>var a = 1;var b = a;  // b:1   简单赋值b = 2；      //a:1,b:2   即使改变b的值，也不会影响a</code></pre><blockquote><p>这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了深浅拷贝的问题，下面会介绍到。</p></blockquote><a id="more"></a><h3 id="一、数据类型"><a href="#一、数据类型" class="headerlink" title="一、数据类型"></a>一、数据类型</h3><p>js中有基本数据类型和引用（复杂）数据类型两种。</p><p>&nbsp;&nbsp;&nbsp;&nbsp; 其中：</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1） 基本数据类型: Number（数值）、String（字符串）、Boolean（布尔）、null、undefined、symbol（es6中出现的新类型，用于当作唯一标识，此处不过多赘述）。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2） 引用数据类型: Object（对象）。</p><ol><li>基本数据类型的赋值<br>正如在文章开头说到的那样，基本数据类型用简单的 = 就能完成赋值。是因为简单数据类型在定义时，会在内存中重新开辟空间来存放新的变量，在内存之中存在着新旧两个变量的空间，互不影响。</li><li>引用数据类型的赋值</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]; <span class="comment">//arr1为数组</span></span><br><span class="line"><span class="keyword">var</span> arr2 = arr1;  <span class="comment">//将arr1的值赋给arr2，arr2:[1,2,3]</span></span><br><span class="line"></span><br><span class="line">arr2.push(<span class="number">4</span>);  <span class="comment">//改变arr2的值,</span></span><br><span class="line">               <span class="comment">//arr1:[1,2,3,4],arr1的值也被改变</span></span><br></pre></td></tr></table></figure><p>在此处arr1与arr2指向的是内存中的同一地址，知识赋值了地址。</p><p>因此，引用数据类型之间的赋值不能使用简单的复制，此处就涉及到了浅拷贝和深拷贝。</p><h3 id="二、深浅拷贝"><a href="#二、深浅拷贝" class="headerlink" title="二、深浅拷贝"></a>二、深浅拷贝</h3><p>在对象/数组中，浅拷贝只是复制了某个对象的指针，而不是对象本身。深拷贝则是创建一个和原对象一摸一样的对象，两个对象之间互不影响。</p><ol><li>浅拷贝</li></ol><p>&nbsp;&nbsp;&nbsp;&nbsp; 浅拷贝只是对基本数据类型的拷贝。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> b = a; <span class="comment">//b:1</span></span><br><span class="line">b = <span class="number">2</span>; <span class="comment">//a:1,b:2</span></span><br></pre></td></tr></table></figure><p>&nbsp;&nbsp;&nbsp;&nbsp; 对于引用数据类型来说这样的简单赋值不可行，但如果 数组/对象 的 项/属性 也是基本数据类型，那么可以使用遍历的方式来进行赋值而两个数组/对象之间互不影响。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;arr1.length;i++)&#123;</span><br><span class="line">    arr2[i] = arr1[i];  <span class="comment">//arr1的每一项都是number基本数据类型，可以使用这样的方式进行赋值.</span></span><br><span class="line">&#125;  <span class="comment">//arr2:[1,2,3]</span></span><br><span class="line"></span><br><span class="line">arr2[<span class="number">0</span>] = <span class="number">4</span>; <span class="comment">//arr1:[1,2,3]</span></span><br><span class="line">             <span class="comment">//arr2:[4,2,3]</span></span><br><span class="line">             <span class="comment">//改变了arr2，arr1的值并没有改变</span></span><br></pre></td></tr></table></figure><ol start="2"><li>深拷贝<br>&nbsp;&nbsp;&nbsp;&nbsp; 如果是下面这种情况，简单的遍历赋值也无法实现深拷贝。</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>]];</span><br><span class="line"><span class="keyword">var</span> arr2 = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;arr1.length;i++)&#123;</span><br><span class="line">    arr2[i] = arr1[i];  </span><br><span class="line">&#125;  <span class="comment">//arr2:[1,2,[3,4]]</span></span><br><span class="line"></span><br><span class="line">arr2[<span class="number">2</span>][<span class="number">1</span>] = <span class="number">5</span>; <span class="comment">//arr1:[1,2,[3,5]]</span></span><br><span class="line">             <span class="comment">//arr2:[1,2,[3,5]]</span></span><br><span class="line">             <span class="comment">//改变了arr2中引用数据类型项的值，arr1的值跟着改变了。</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">    a:<span class="number">1</span>,</span><br><span class="line">    b:<span class="number">2</span>,</span><br><span class="line">    c:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(obj1).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;</span><br><span class="line"> obj2[key] = obj1[key];</span><br><span class="line">&#125;);  <span class="comment">//obj2:&#123;a:1,b:2,c:[1,2,3]&#125;</span></span><br><span class="line"></span><br><span class="line">obj2.c[<span class="number">0</span>] = <span class="number">4</span>; <span class="comment">//obj2:&#123;a:1,b:2,c:[4,2,3]&#125;</span></span><br><span class="line">             <span class="comment">//obj1:&#123;a:1,b:2,c:[4,2,3]&#125;</span></span><br><span class="line">             <span class="comment">//改变了obj2中引用数据类型项的值，obj1的值跟着改变了。</span></span><br></pre></td></tr></table></figure><p>&nbsp;&nbsp;&nbsp;&nbsp; 所以此时介绍两个起到深拷贝作用的方法：concat()、$.extend()</p><blockquote><p>concat（）、$.extend()方对用途不止如此，此处讨论深拷贝的方法，不对其他功能过多阐述</p></blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)concat()</p><blockquote><p>concat()方法用来对数组进行深拷贝操作</p></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [].concat(arr1);  <span class="comment">//arr2:[1,2,3]</span></span><br><span class="line"></span><br><span class="line">arr2[<span class="number">0</span>] = <span class="number">0</span>;  <span class="comment">//arr2 = [0,2,3]</span></span><br><span class="line">              <span class="comment">//arr1 = [1,2,3]  arr1并未受到影响</span></span><br></pre></td></tr></table></figure><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)$.extend()</p><blockquote><p>$.extend()方法用来对对象进行深拷贝操作</p></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">    a:<span class="number">1</span>,</span><br><span class="line">    b:<span class="number">2</span>,</span><br><span class="line">    c:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> obj2 = $.extend(&#123;&#125;,obj1);  <span class="comment">//obj2:&#123;a:1,b:2,c:[1,2,3]&#125;</span></span><br><span class="line"></span><br><span class="line">obj2.c[<span class="number">0</span>] = <span class="number">0</span>;  <span class="comment">//obj2:&#123;a:1,b:2,c:[0,2,3]&#125;</span></span><br><span class="line">              <span class="comment">//obj1:&#123;a:1,b:2,c:[1,2,3]&#125;  obj1并未受到影响</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>vue组件化开发</tag>
+        <tag>axios</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js中变量的深浅拷贝]]></title>
+    <url>%2F2019%2F09%2F09%2Fcopy%2F</url>
+    <content type="text"><![CDATA[js中 对象和数组的深浅拷贝 一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如： var a = 1; var b = a; // b:1 简单赋值 b = 2； //a:1,b:2 即使改变b的值，也不会影响a 这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了深浅拷贝的问题，下面会介绍到。 一、数据类型js中有基本数据类型和引用（复杂）数据类型两种。 &nbsp;&nbsp;&nbsp;&nbsp; 其中： &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1） 基本数据类型: Number（数值）、String（字符串）、Boolean（布尔）、null、undefined、symbol（es6中出现的新类型，用于当作唯一标识，此处不过多赘述）。 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2） 引用数据类型: Object（对象）。 基本数据类型的赋值正如在文章开头说到的那样，基本数据类型用简单的 = 就能完成赋值。是因为简单数据类型在定义时，会在内存中重新开辟空间来存放新的变量，在内存之中存在着新旧两个变量的空间，互不影响。 引用数据类型的赋值 12345var arr1 = [1,2,3]; //arr1为数组var arr2 = arr1; //将arr1的值赋给arr2，arr2:[1,2,3]arr2.push(4); //改变arr2的值, //arr1:[1,2,3,4],arr1的值也被改变 在此处arr1与arr2指向的是内存中的同一地址，知识赋值了地址。 因此，引用数据类型之间的赋值不能使用简单的复制，此处就涉及到了浅拷贝和深拷贝。 二、深浅拷贝在对象/数组中，浅拷贝只是复制了某个对象的指针，而不是对象本身。深拷贝则是创建一个和原对象一摸一样的对象，两个对象之间互不影响。 浅拷贝 &nbsp;&nbsp;&nbsp;&nbsp; 浅拷贝只是对基本数据类型的拷贝。 123var a = 1;var b = a; //b:1b = 2; //a:1,b:2 &nbsp;&nbsp;&nbsp;&nbsp; 对于引用数据类型来说这样的简单赋值不可行，但如果 数组/对象 的 项/属性 也是基本数据类型，那么可以使用遍历的方式来进行赋值而两个数组/对象之间互不影响。 12345678910var arr1 = [1,2,3];var arr2 = [];for (let i = 0;i&lt;arr1.length;i++)&#123; arr2[i] = arr1[i]; //arr1的每一项都是number基本数据类型，可以使用这样的方式进行赋值.&#125; //arr2:[1,2,3]arr2[0] = 4; //arr1:[1,2,3] //arr2:[4,2,3] //改变了arr2，arr1的值并没有改变 深拷贝&nbsp;&nbsp;&nbsp;&nbsp; 如果是下面这种情况，简单的遍历赋值也无法实现深拷贝。 12345678910var arr1 = [1,2,[3,4]];var arr2 = [];for (let i = 0;i&lt;arr1.length;i++)&#123; arr2[i] = arr1[i]; &#125; //arr2:[1,2,[3,4]]arr2[2][1] = 5; //arr1:[1,2,[3,5]] //arr2:[1,2,[3,5]] //改变了arr2中引用数据类型项的值，arr1的值跟着改变了。 1234567891011121314var obj1 = &#123; a:1, b:2, c:[1,2,3]&#125;;var obj2 = &#123;&#125;;Object.keys(obj1).forEach(function(key)&#123; obj2[key] = obj1[key];&#125;); //obj2:&#123;a:1,b:2,c:[1,2,3]&#125;obj2.c[0] = 4; //obj2:&#123;a:1,b:2,c:[4,2,3]&#125; //obj1:&#123;a:1,b:2,c:[4,2,3]&#125; //改变了obj2中引用数据类型项的值，obj1的值跟着改变了。 &nbsp;&nbsp;&nbsp;&nbsp; 所以此时介绍两个起到深拷贝作用的方法：concat()、$.extend() concat（）、$.extend()方对用途不止如此，此处讨论深拷贝的方法，不对其他功能过多阐述 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)concat() concat()方法用来对数组进行深拷贝操作 12345var arr1 = [1,2,3];var arr2 = [].concat(arr1); //arr2:[1,2,3]arr2[0] = 0; //arr2 = [0,2,3] //arr1 = [1,2,3] arr1并未受到影响 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)$.extend() $.extend()方法用来对对象进行深拷贝操作 123456789var obj1 = &#123; a:1, b:2, c:[1,2,3]&#125;;var obj2 = $.extend(&#123;&#125;,obj1); //obj2:&#123;a:1,b:2,c:[1,2,3]&#125;obj2.c[0] = 0; //obj2:&#123;a:1,b:2,c:[0,2,3]&#125; //obj1:&#123;a:1,b:2,c:[1,2,3]&#125; obj1并未受到影响]]></content>
       <categories>
-          
-          <category> js基础 </category>
-          
+        <category>js基础</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> js基础 </tag>
-            
-            <tag> 深浅拷贝 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Js对数组的一些操作方法</title>
-      <link href="/2019/09/05/Js%20Array%20and%20String/"/>
-      <url>/2019/09/05/Js%20Array%20and%20String/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>本文主要介绍js中对数组和字符串的基本操作</p></blockquote><h2 id="一-数组操作"><a href="#一-数组操作" class="headerlink" title="一. 数组操作"></a>一. 数组操作</h2><blockquote><p>  概念</p></blockquote><p>数组操作分为两类:</p><ol><li><p>会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();</p></li><li><p>不会改变原数组的方法: .concat(), .slice()。</p></li></ol><h3 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h3><p>push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line">arr.push([<span class="number">7</span>,<span class="number">8</span>]);  <span class="comment">//arr:[1,2,3,4,5,6,[7,8]]</span></span><br><span class="line">                  <span class="comment">//如果插入的为数组，则插入的这个数组成为arr的最后一项</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.push(<span class="number">9</span>,<span class="number">10</span>);   <span class="comment">//arr:[1,2,3,4,5,6,[7,8],9,10]</span></span><br><span class="line">                              <span class="comment">//count:9  ==  返回值为改变后数组的长度</span></span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="pop"><a href="#pop" class="headerlink" title="pop()"></a>pop()</h3><p>pop()方法用于删除数组的最后一个元素，并返回被删除的元素。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = arr.pop();   <span class="comment">//arr:[1,2,3,4,5]</span></span><br><span class="line">                        <span class="comment">//item:6  ==  返回值为被删除的元素</span></span><br></pre></td></tr></table></figure><h3 id="shift"><a href="#shift" class="headerlink" title="shift()"></a>shift()</h3><p>shif()方法用于把数组的第一个元素从其中删除，并返回第一个元素的值.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = arr.shift();     <span class="comment">//arr:[2,3,4,5,6]</span></span><br><span class="line">                            <span class="comment">//item:1  ==  返回值为被删除的元素</span></span><br></pre></td></tr></table></figure><h3 id="unshift"><a href="#unshift" class="headerlink" title="unshift()"></a>unshift()</h3><p>unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.unshift(<span class="number">1</span>,<span class="number">2</span>);   <span class="comment">//arr:[1,2,1,2,3,4,5,6]</span></span><br><span class="line">                                <span class="comment">//count:8   ==  返回数组的长度</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.unshift([<span class="number">1</span>,<span class="number">2</span>]);     <span class="comment">//arr:[[1,2],1,2,1,2,3,4,5,6]</span></span><br><span class="line">                                    <span class="comment">//count:9</span></span><br></pre></td></tr></table></figure><h3 id="splice"><a href="#splice" class="headerlink" title="splice()"></a>splice()</h3><p>splice() 方法向数组中添加项目(或 向数组中添加项目)，然后返回被删除的项目，返回值为数组。</p><p><strong>一句话概括一下：此方法不是单纯的添加或者删除数组中的项，更像是更改数组。从索引为index的项开始（包括index项）往后面找个数length的项，将他们替换为item1…itemX</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：arrayObject.splice(index,length,item1,.....,itemX)</span><br></pre></td></tr></table></figure><table><thead><tr><th align="center">参数</th><th align="center">描述</th></tr></thead><tbody><tr><td align="center">index</td><td align="center">必填。规定添加（删除）的位置。即从索引为index的项为起点。如果为负数则从倒数项开始。</td></tr><tr><td align="center">length</td><td align="center">必填。规定删除的项的个数，如果为0则不删除。</td></tr><tr><td align="center">item1…itemX</td><td align="center">选填。规定添加的项。如果有item1…itemX，则不论是否删除，item1…itemX都会添加到数组。</td></tr></tbody></table><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,4,5,6];</span><br><span class="line"></span><br><span class="line">var items = arr.splice(5,1);   //arr:[1,2,3,4,5]    此用法表现为删除操作</span><br><span class="line">                                //items:[6]     返回被删除的项</span><br><span class="line"></span><br><span class="line">var items = arr.splice(4,1,7,8,9);     //arr:[1,2,3,4,7,8,9]    此用法表现为更改操作。从第index为4的项开始的1项删除，并插入 7，8，9</span><br><span class="line">                                    //count:[5]     返回被删除的项</span><br></pre></td></tr></table></figure><h3 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h3><p>reverse() 方法用于颠倒数组中元素的顺序，无返回值。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [a,b,c,d];</span><br><span class="line"></span><br><span class="line">arr.reverse();   <span class="comment">//arr:[d,c,b,a]</span></span><br></pre></td></tr></table></figure><h3 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h3><p>sort() 方法用于对数组的元素进行排序，无返回值。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line">arr.sort();   <span class="comment">//arr:[1,2,3,4,5]     完成排序</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//但是注意，该方法仅用于对数组项为单纯数字的数组进行排序，如果数组的项为字符串，结果可能不为预期</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> strArr = [<span class="string">'1'</span>,<span class="string">'12'</span>,<span class="string">'2'</span>,<span class="string">'5'</span>,<span class="string">'300'</span>];</span><br><span class="line"></span><br><span class="line">strArr.sort();      <span class="comment">//strArr:['1','12','2','300','5']</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>js基础</tag>
+        <tag>深浅拷贝</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Js对数组的一些操作方法]]></title>
+    <url>%2F2019%2F09%2F05%2FJs%20Array%20and%20String%2F</url>
+    <content type="text"><![CDATA[本文主要介绍js中对数组和字符串的基本操作 一. 数组操作 概念 数组操作分为两类: 会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort(); 不会改变原数组的方法: .concat(), .slice()。 push()push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。 1234567var arr = [1,2,3,4,5,6];arr.push([7,8]); //arr:[1,2,3,4,5,6,[7,8]] //如果插入的为数组，则插入的这个数组成为arr的最后一项var count = arr.push(9,10); //arr:[1,2,3,4,5,6,[7,8],9,10] //count:9 == 返回值为改变后数组的长度 pop()pop()方法用于删除数组的最后一个元素，并返回被删除的元素。 1234var arr = [1,2,3,4,5,6];var item = arr.pop(); //arr:[1,2,3,4,5] //item:6 == 返回值为被删除的元素 shift()shif()方法用于把数组的第一个元素从其中删除，并返回第一个元素的值. 1234var arr = [1,2,3,4,5,6];var item = arr.shift(); //arr:[2,3,4,5,6] //item:1 == 返回值为被删除的元素 unshift()unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度. 1234567var arr = [1,2,3,4,5,6];var count = arr.unshift(1,2); //arr:[1,2,1,2,3,4,5,6] //count:8 == 返回数组的长度var count = arr.unshift([1,2]); //arr:[[1,2],1,2,1,2,3,4,5,6] //count:9 splice()splice() 方法向数组中添加项目(或 向数组中添加项目)，然后返回被删除的项目，返回值为数组。 一句话概括一下：此方法不是单纯的添加或者删除数组中的项，更像是更改数组。从索引为index的项开始（包括index项）往后面找个数length的项，将他们替换为item1…itemX 1语法：arrayObject.splice(index,length,item1,.....,itemX) 参数 描述 index 必填。规定添加（删除）的位置。即从索引为index的项为起点。如果为负数则从倒数项开始。 length 必填。规定删除的项的个数，如果为0则不删除。 item1…itemX 选填。规定添加的项。如果有item1…itemX，则不论是否删除，item1…itemX都会添加到数组。 1234567var arr = [1,2,3,4,5,6];var items = arr.splice(5,1); //arr:[1,2,3,4,5] 此用法表现为删除操作 //items:[6] 返回被删除的项var items = arr.splice(4,1,7,8,9); //arr:[1,2,3,4,7,8,9] 此用法表现为更改操作。从第index为4的项开始的1项删除，并插入 7，8，9 //count:[5] 返回被删除的项 reverse()reverse() 方法用于颠倒数组中元素的顺序，无返回值。 123var arr = [a,b,c,d];arr.reverse(); //arr:[d,c,b,a] sort()sort() 方法用于对数组的元素进行排序，无返回值。 123456789var arr = [1,5,3,2,4];arr.sort(); //arr:[1,2,3,4,5] 完成排序//但是注意，该方法仅用于对数组项为单纯数字的数组进行排序，如果数组的项为字符串，结果可能不为预期var strArr = ['1','12','2','5','300'];strArr.sort(); //strArr:['1','12','2','300','5']]]></content>
       <categories>
-          
-          <category> js基础 </category>
-          
+        <category>js基础</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> js数组 </tag>
-            
-            <tag> js基础 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>my first article</title>
-      <link href="/2019/09/04/my-first-article/"/>
-      <url>/2019/09/04/my-first-article/</url>
-      
-        <content type="html"><![CDATA[<p>lalalalalalal</p><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><blockquote><p>感谢人生中每一位老师</p></blockquote><p> <strong>这是粗体</strong></p><p> 这不是粗体</p><p>  <a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a></p><p> <del>短发短发短发</del> </p><p><a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a></p><blockquote><p>我从来不梦想，我只是在努力认识现实；戏剧家洪深说：我的梦想是明年吃苦的能力比今年更强；鲁迅说：人生最大的痛苦是梦醒了无路可走；苏格拉底说：人类的幸福和欢乐在于奋斗，而最有价值的是为了理想而奋斗</p></blockquote><a id="more"></a><p>在Js中通常使用<code>console.log(&quot;&quot;)</code>的方式在控制台打印数据</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a+b;<span class="comment">//返回a与b相加的值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><table><thead><tr><th align="center">序号</th><th align="center">名称</th><th align="center">年龄</th></tr></thead><tbody><tr><td align="center">1</td><td align="center">张三</td><td align="center">18</td></tr><tr><td align="center">2</td><td align="center">李四</td><td align="center">18</td></tr><tr><td align="center">3</td><td align="center">王五</td><td align="center">18</td></tr></tbody></table><ol><li><p>语文</p></li><li><p>数学</p></li><li><p>英语</p></li></ol><ul><li>无序列表<ul><li>首个title<ul><li>二级title</li></ul></li></ul></li></ul><ol><li>有序列表<ol><li>首个title<ol><li>二级title<ol><li>三级title</li></ol></li></ol></li></ol></li></ol>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 测试文章 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2019/09/04/hello-world/"/>
-      <url>/2019/09/04/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>js数组</tag>
+        <tag>js基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[my first article]]></title>
+    <url>%2F2019%2F09%2F04%2Fmy-first-article%2F</url>
+    <content type="text"><![CDATA[lalalalalalal 这是一级标题这是二级标题这是三级标题 感谢人生中每一位老师 这是粗体 这不是粗体 百度 短发短发短发 https://www.baidu.com 我从来不梦想，我只是在努力认识现实；戏剧家洪深说：我的梦想是明年吃苦的能力比今年更强；鲁迅说：人生最大的痛苦是梦醒了无路可走；苏格拉底说：人类的幸福和欢乐在于奋斗，而最有价值的是为了理想而奋斗 在Js中通常使用console.log(&quot;&quot;)的方式在控制台打印数据 123function add(a,b) &#123; return a+b;//返回a与b相加的值&#125; 序号 名称 年龄 1 张三 18 2 李四 18 3 王五 18 语文 数学 英语 无序列表 首个title 二级title 有序列表 首个title 二级title 三级title]]></content>
+      <tags>
+        <tag>测试文章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F09%2F04%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
 </search>
