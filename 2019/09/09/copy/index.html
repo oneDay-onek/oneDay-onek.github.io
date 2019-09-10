@@ -73,26 +73,26 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="K's 个人博客 2.00" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="K's 个人博客 2.0" type="application/atom+xml">
 
 
 
 
 
 
-<meta name="description" content="js中 对象和数组的深浅拷贝 一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：  var a = 1; var b = a;  // b:1   简单赋值 b = 2；      //a:1,b:2   即使改变b的值，也不会影响a 这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了深">
+<meta name="description" content="js中 对象和数组的深浅拷贝 一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：  var a = 1; var b = a;  // b:1   简单赋值 b = 2；      //a:1,b:2   即使改变b的值，也不会影响a 这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了">
 <meta name="keywords" content="js基础,深浅拷贝">
 <meta property="og:type" content="article">
-<meta property="og:title" content="copy">
+<meta property="og:title" content="js中变量的深浅拷贝">
 <meta property="og:url" content="/2019/09/09/copy/index.html">
-<meta property="og:site_name" content="K&#39;s 个人博客 2.00">
-<meta property="og:description" content="js中 对象和数组的深浅拷贝 一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：  var a = 1; var b = a;  // b:1   简单赋值 b = 2；      //a:1,b:2   即使改变b的值，也不会影响a 这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了深">
+<meta property="og:site_name" content="K&#39;s 个人博客 2.0">
+<meta property="og:description" content="js中 对象和数组的深浅拷贝 一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：  var a = 1; var b = a;  // b:1   简单赋值 b = 2；      //a:1,b:2   即使改变b的值，也不会影响a 这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="/09/copy/about_old.jpg">
-<meta property="og:updated_time" content="2019-09-10T02:38:56.544Z">
+<meta property="og:updated_time" content="2019-09-10T09:54:30.149Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="copy">
-<meta name="twitter:description" content="js中 对象和数组的深浅拷贝 一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：  var a = 1; var b = a;  // b:1   简单赋值 b = 2；      //a:1,b:2   即使改变b的值，也不会影响a 这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了深">
+<meta name="twitter:title" content="js中变量的深浅拷贝">
+<meta name="twitter:description" content="js中 对象和数组的深浅拷贝 一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：  var a = 1; var b = a;  // b:1   简单赋值 b = 2；      //a:1,b:2   即使改变b的值，也不会影响a 这个简单的例子证明了基本数据类型的变量只需要简单赋值即可。但是在给对象和数组赋值的时候这种方法就不可行了，涉及到了">
 <meta name="twitter:image" content="/09/copy/about_old.jpg">
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <title>copy | K's 个人博客 2.00</title>
+  <title>js中变量的深浅拷贝 | K's 个人博客 2.0</title>
   
 
 
@@ -159,7 +159,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">K's 个人博客 2.00</span>
+        <span class="site-title">K's 个人博客 2.0</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -295,7 +295,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="K's 个人博客 2.00">
+      <meta itemprop="name" content="K's 个人博客 2.0">
     </span>
 
     
@@ -303,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">copy</h1>
+          <h1 class="post-title" itemprop="name headline">js中变量的深浅拷贝</h1>
         
 
         <div class="post-meta">
@@ -380,7 +380,8 @@
       
 
       
-        <p><img src="/09/copy/about_old.jpg" alt></p>
+        <img src="/09/copy/about_old.jpg" width="800px">
+
 <h2 id="js中-对象和数组的深浅拷贝"><a href="#js中-对象和数组的深浅拷贝" class="headerlink" title="js中 对象和数组的深浅拷贝"></a>js中 对象和数组的深浅拷贝</h2><blockquote>
 <p>一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：</p>
 </blockquote>
@@ -478,6 +479,10 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a</code></pre><bl
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/09/10/多个axios如何进行同步请求/" rel="prev" title="多个axios如何进行同步请求">
+                多个axios如何进行同步请求 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -555,7 +560,7 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a</code></pre><bl
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -566,7 +571,7 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a</code></pre><bl
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -577,7 +582,7 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a</code></pre><bl
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

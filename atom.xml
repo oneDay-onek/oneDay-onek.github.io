@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>K&#39;s 个人博客 2.00</title>
+  <title>K&#39;s 个人博客 2.0</title>
   
   <subtitle>靡不有初，鲜克有终</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-10T02:38:56.544Z</updated>
+  <updated>2019-09-10T09:53:25.963Z</updated>
   <id>/</id>
   
   <author>
@@ -17,15 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>copy</title>
-    <link href="/2019/09/09/copy/"/>
-    <id>/2019/09/09/copy/</id>
-    <published>2019-09-09T13:59:59.000Z</published>
-    <updated>2019-09-10T02:38:56.544Z</updated>
+    <title>多个axios如何进行同步请求</title>
+    <link href="/2019/09/10/%E5%A4%9A%E4%B8%AAaxios%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%90%8C%E6%AD%A5%E8%AF%B7%E6%B1%82/"/>
+    <id>/2019/09/10/多个axios如何进行同步请求/</id>
+    <published>2019-09-10T09:52:12.000Z</published>
+    <updated>2019-09-10T09:53:25.963Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/09/copy/about_old.jpg&quot; alt&gt;&lt;/p&gt;
+    </summary>
+    
+    
+      <category term="vue组件化开发" scheme="/categories/vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="vue组件化开发" scheme="/tags/vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="axios" scheme="/tags/axios/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js中变量的深浅拷贝</title>
+    <link href="/2019/09/09/copy/"/>
+    <id>/2019/09/09/copy/</id>
+    <published>2019-09-09T13:59:59.000Z</published>
+    <updated>2019-09-10T09:54:30.149Z</updated>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/09/copy/about_old.jpg&quot; width=&quot;800px&quot;&gt;
+
 &lt;h2 id=&quot;js中-对象和数组的深浅拷贝&quot;&gt;&lt;a href=&quot;#js中-对象和数组的深浅拷贝&quot; class=&quot;headerlink&quot; title=&quot;js中 对象和数组的深浅拷贝&quot;&gt;&lt;/a&gt;js中 对象和数组的深浅拷贝&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -78,9 +100,9 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt
       <category term="js基础" scheme="/categories/js%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
-    
       <category term="js数组" scheme="/tags/js%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
