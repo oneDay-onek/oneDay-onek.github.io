@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-10T16:05:38.710Z</updated>
+  <updated>2019-09-10T16:19:09.255Z</updated>
   <id>/</id>
   
   <author>
@@ -21,17 +21,13 @@
     <link href="/2019/09/10/elementUI%E5%90%84%E4%B8%AA%E7%BB%84%E4%BB%B6%E5%9C%A8%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>/2019/09/10/elementUI各个组件在具体使用中的问题/</id>
     <published>2019-09-10T14:49:45.000Z</published>
-    <updated>2019-09-10T16:05:38.710Z</updated>
+    <updated>2019-09-10T16:19:09.255Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;一、elementUI-时间控件表单验证方法&quot;&gt;&lt;a href=&quot;#一、elementUI-时间控件表单验证方法&quot; class=&quot;headerlink&quot; title=&quot;一、elementUI 时间控件表单验证方法&quot;&gt;&lt;/a&gt;一、elementUI
-        
-      
+      &lt;h2 id=&quot;一、elementUI-时间控件表单验证方法&quot;&gt;&lt;a href=&quot;#一、elementUI-时间控件表单验证方法&quot; class=&quot;headerlink&quot; title=&quot;一、elementUI 时间控件表单验证方法&quot;&gt;&lt;/a&gt;一、elementUI 时间控件表单验证方法&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;elementUI中的日期时间控件是挺不错的，日期选择的逻辑也还比较符合人们的正常习惯，但是该控件是一个标签生成两个input框的，在表单验证中无法使用required来验证是否非空。本篇文章是我采取的解决方法，也奏效了。可以作为参考。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     

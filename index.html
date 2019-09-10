@@ -378,25 +378,16 @@
 
       
         
-          
-            <h2 id="一、elementUI-时间控件表单验证方法"><a href="#一、elementUI-时间控件表单验证方法" class="headerlink" title="一、elementUI 时间控件表单验证方法"></a>一、elementUI 时间控件表单验证方法</h2><p>👇这是elementUI时间控件的HTML结构，</p>
-<p><img src="http://i1.fuimg.com/699086/b4a0791ea69b66e0.png" alt></p>
-<p><img src="http://i1.fuimg.com/699086/65ed9ee2a49af2fb.png" alt="Markdown"></p>
-<p>这是在data return中定义的验证规则，validator属性调用自定义验证规则，此处为calidatorTime，该方法会自带三个参数 rule，value，callback；其中callback是方法，callback（）表示验证通过。callback（new Error（“此填写报错信息”））表示没有通过验证并提示错误信息.</p>
-<p><img src="http://i1.fuimg.com/699086/134912fb59d23fbf.png" alt></p>
-<blockquote>
-<p>自定义的validator验证规则方法需在data（）{}中以变量形式定义，</p>
+          <h2 id="一、elementUI-时间控件表单验证方法"><a href="#一、elementUI-时间控件表单验证方法" class="headerlink" title="一、elementUI 时间控件表单验证方法"></a>一、elementUI 时间控件表单验证方法</h2><blockquote>
+<p>elementUI中的日期时间控件是挺不错的，日期选择的逻辑也还比较符合人们的正常习惯，但是该控件是一个标签生成两个input框的，在表单验证中无法使用required来验证是否非空。本篇文章是我采取的解决方法，也奏效了。可以作为参考。</p>
 </blockquote>
-<p>尝试过在rules:[]规则中把validator作为其中一个属性，下面是一个网上的小例子，意在说明格式：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mobile:[&#123; </span><br><span class="line">        required: <span class="literal">true</span>,</span><br><span class="line">        message: <span class="string">'请输入手机号码'</span>,</span><br><span class="line">        trigger: <span class="string">'blur'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;<span class="attr">validator</span>:<span class="function"><span class="keyword">function</span>(<span class="params">rule,value,callback</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="regexp">/^1[34578]\d&#123;9&#125;$/</span>.test(value) == <span class="literal">false</span>)&#123;</span><br><span class="line">                callback(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"请输入正确的手机号"</span>));</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                callback();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, <span class="attr">trigger</span>: <span class="string">'blur'</span>&#125;</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
-
-<p>也许是因为elementUI中这个日期时间控件是单标签渲染出两个input框的缘故（口误），这种写法不奏效，还是只能采用我最开始的那种写法。</p>
-<p><img src="http://i1.fuimg.com/699086/bc3c679e641b0a61.png" alt></p>
-<blockquote>
-<p>切记，如果有表单验证的页面，在类似提交或者保存功能的按钮的点击方法中嵌套一层以上代码，会在触发点击事件时进行表单验证，如果通过验证才能继续运行代码。</p>
-</blockquote>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/10/elementUI各个组件在具体使用中的问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

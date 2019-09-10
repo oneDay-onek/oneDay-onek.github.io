@@ -80,22 +80,22 @@
 
 
 
-<meta name="description" content="一、elementUI 时间控件表单验证方法👇这是elementUI时间控件的HTML结构，   这是在data return中定义的验证规则，validator属性调用自定义验证规则，此处为calidatorTime，该方法会自带三个参数 rule，value，callback；其中callback是方法，callback（）表示验证通过。callback（new Error（“此填写报错信息">
+<meta name="description" content="一、elementUI 时间控件表单验证方法 elementUI中的日期时间控件是挺不错的，日期选择的逻辑也还比较符合人们的正常习惯，但是该控件是一个标签生成两个input框的，在表单验证中无法使用required来验证是否非空。本篇文章是我采取的解决方法，也奏效了。可以作为参考。">
 <meta name="keywords" content="vue组件化开发,elementUI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="elementUI各个组件在具体使用中的问题">
 <meta property="og:url" content="/2019/09/10/elementUI各个组件在具体使用中的问题/index.html">
 <meta property="og:site_name" content="K&#39;s 个人博客 2.0">
-<meta property="og:description" content="一、elementUI 时间控件表单验证方法👇这是elementUI时间控件的HTML结构，   这是在data return中定义的验证规则，validator属性调用自定义验证规则，此处为calidatorTime，该方法会自带三个参数 rule，value，callback；其中callback是方法，callback（）表示验证通过。callback（new Error（“此填写报错信息">
+<meta property="og:description" content="一、elementUI 时间控件表单验证方法 elementUI中的日期时间控件是挺不错的，日期选择的逻辑也还比较符合人们的正常习惯，但是该控件是一个标签生成两个input框的，在表单验证中无法使用required来验证是否非空。本篇文章是我采取的解决方法，也奏效了。可以作为参考。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://i1.fuimg.com/699086/b4a0791ea69b66e0.png">
 <meta property="og:image" content="http://i1.fuimg.com/699086/65ed9ee2a49af2fb.png">
 <meta property="og:image" content="http://i1.fuimg.com/699086/134912fb59d23fbf.png">
 <meta property="og:image" content="http://i1.fuimg.com/699086/bc3c679e641b0a61.png">
-<meta property="og:updated_time" content="2019-09-10T16:05:38.710Z">
+<meta property="og:updated_time" content="2019-09-10T16:19:09.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="elementUI各个组件在具体使用中的问题">
-<meta name="twitter:description" content="一、elementUI 时间控件表单验证方法👇这是elementUI时间控件的HTML结构，   这是在data return中定义的验证规则，validator属性调用自定义验证规则，此处为calidatorTime，该方法会自带三个参数 rule，value，callback；其中callback是方法，callback（）表示验证通过。callback（new Error（“此填写报错信息">
+<meta name="twitter:description" content="一、elementUI 时间控件表单验证方法 elementUI中的日期时间控件是挺不错的，日期选择的逻辑也还比较符合人们的正常习惯，但是该控件是一个标签生成两个input框的，在表单验证中无法使用required来验证是否非空。本篇文章是我采取的解决方法，也奏效了。可以作为参考。">
 <meta name="twitter:image" content="http://i1.fuimg.com/699086/b4a0791ea69b66e0.png">
 
 
@@ -383,7 +383,12 @@
       
 
       
-        <h2 id="一、elementUI-时间控件表单验证方法"><a href="#一、elementUI-时间控件表单验证方法" class="headerlink" title="一、elementUI 时间控件表单验证方法"></a>一、elementUI 时间控件表单验证方法</h2><p>👇这是elementUI时间控件的HTML结构，</p>
+        <h2 id="一、elementUI-时间控件表单验证方法"><a href="#一、elementUI-时间控件表单验证方法" class="headerlink" title="一、elementUI 时间控件表单验证方法"></a>一、elementUI 时间控件表单验证方法</h2><blockquote>
+<p>elementUI中的日期时间控件是挺不错的，日期选择的逻辑也还比较符合人们的正常习惯，但是该控件是一个标签生成两个input框的，在表单验证中无法使用required来验证是否非空。本篇文章是我采取的解决方法，也奏效了。可以作为参考。</p>
+</blockquote>
+<a id="more"></a>
+
+<p>👇这是elementUI时间控件的HTML结构，</p>
 <p><img src="http://i1.fuimg.com/699086/b4a0791ea69b66e0.png" alt></p>
 <p><img src="http://i1.fuimg.com/699086/65ed9ee2a49af2fb.png" alt="Markdown"></p>
 <p>这是在data return中定义的验证规则，validator属性调用自定义验证规则，此处为calidatorTime，该方法会自带三个参数 rule，value，callback；其中callback是方法，callback（）表示验证通过。callback（new Error（“此填写报错信息”））表示没有通过验证并提示错误信息.</p>
