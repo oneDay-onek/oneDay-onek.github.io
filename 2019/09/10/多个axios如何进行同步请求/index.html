@@ -80,18 +80,18 @@
 
 
 
-<meta name="description" content="个人,博客,个人博客,前端,vue,node,vue.js,node.js">
+<meta name="description" content="多个axios如何进行同步请求一、    使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。 axiosReq1(params){                //将axios对象封装     this.axios.post(‘/login’,…{params}); }; axiosReq2(params){     this.axios.post(‘/re">
 <meta name="keywords" content="vue组件化开发,axios">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多个axios如何进行同步请求">
 <meta property="og:url" content="/2019/09/10/多个axios如何进行同步请求/index.html">
 <meta property="og:site_name" content="K&#39;s 个人博客 2.0">
-<meta property="og:description" content="个人,博客,个人博客,前端,vue,node,vue.js,node.js">
+<meta property="og:description" content="多个axios如何进行同步请求一、    使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。 axiosReq1(params){                //将axios对象封装     this.axios.post(‘/login’,…{params}); }; axiosReq2(params){     this.axios.post(‘/re">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-10T09:53:25.963Z">
+<meta property="og:updated_time" content="2019-09-10T14:33:18.345Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多个axios如何进行同步请求">
-<meta name="twitter:description" content="个人,博客,个人博客,前端,vue,node,vue.js,node.js">
+<meta name="twitter:description" content="多个axios如何进行同步请求一、    使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。 axiosReq1(params){                //将axios对象封装     this.axios.post(‘/login’,…{params}); }; axiosReq2(params){     this.axios.post(‘/re">
 
 
 
@@ -378,7 +378,37 @@
       
 
       
-        
+        <h2 id="多个axios如何进行同步请求"><a href="#多个axios如何进行同步请求" class="headerlink" title="多个axios如何进行同步请求"></a>多个axios如何进行同步请求</h2><p>一、<br>    使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。</p>
+<pre><code>axiosReq1(params){                //将axios对象封装
+    this.axios.post(‘/login’,…{params});
+};
+axiosReq2(params){
+    this.axios.post(‘/register’,…{params});
+};
+···
+···
+
+this.axios.all([axiosReq1(params),axiosReq2(params)…axiosReqX(params)])
+.then(function(res1,res2…resX){
+    console.log(res1,res1);
+    console.log(res2,res2);
+    ...
+    console.log(resX,resX);
+})</code></pre><p>二、<br>    因为axios是vue基于es6的promise语法对ajax进行的封装，每个axios.get/post()就是一个promise对象，即axios.()内部可使用promise语法的return对回调函数进行执行。（具体es6及promise对象请移步至其他博客进行了解😉）</p>
+<pre><code>this.axios.get(&apos;/login&apos;)    
+.then((res) =&gt; {
+    if (res.status) {
+        ...
+        console.log(res);
+    };
+    return this.axios.get(&apos;/getDatas&apos;)；
+
+})
+.then((res)=&gt;{
+    if (res.status) {
+        console.log(res);
+    }
+})</code></pre>
       
     </div>
     
@@ -419,6 +449,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/10/elementUI各个组件在具体使用中的问题/" rel="prev" title="elementUI各个组件在具体使用中的问题">
+                elementUI各个组件在具体使用中的问题 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -470,8 +504,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -488,7 +531,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -510,7 +553,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -540,6 +583,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多个axios如何进行同步请求"><span class="nav-text">多个axios如何进行同步请求</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

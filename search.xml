@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[elementUI各个组件在具体使用中的问题]]></title>
+    <url>%2F2019%2F09%2F10%2FelementUI%E5%90%84%E4%B8%AA%E7%BB%84%E4%BB%B6%E5%9C%A8%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[一、elementUI 时间控件表单验证方法👇这是elementUI时间控件的HTML结构， 这是在data return中定义的验证规则，validator属性调用自定义验证规则，此处为calidatorTime，该方法会自带三个参数 rule，value，callback；其中callback是方法，callback（）表示验证通过。callback（new Error（“此填写报错信息”））表示没有通过验证并提示错误信息. 自定义的validator验证规则方法需在data（）{}中以变量形式定义， 尝试过在rules:[]规则中把validator作为其中一个属性，下面是一个网上的小例子，意在说明格式： 12345678910111213mobile:[&#123; required: true, message: '请输入手机号码', trigger: 'blur' &#125;, &#123;validator:function(rule,value,callback)&#123; if(/^1[34578]\d&#123;9&#125;$/.test(value) == false)&#123; callback(new Error("请输入正确的手机号")); &#125;else&#123; callback(); &#125; &#125;, trigger: 'blur'&#125; ] 也许是因为elementUI中这个日期时间控件是单标签渲染出两个input框的缘故（口误），这种写法不奏效，还是只能采用我最开始的那种写法。 切记，如果有表单验证的页面，在类似提交或者保存功能的按钮的点击方法中嵌套一层以上代码，会在触发点击事件时进行表单验证，如果通过验证才能继续运行代码。]]></content>
+      <categories>
+        <category>vue组件化开发</category>
+      </categories>
+      <tags>
+        <tag>vue组件化开发</tag>
+        <tag>elementUI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[多个axios如何进行同步请求]]></title>
     <url>%2F2019%2F09%2F10%2F%E5%A4%9A%E4%B8%AAaxios%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%90%8C%E6%AD%A5%E8%AF%B7%E6%B1%82%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[多个axios如何进行同步请求一、 使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。 axiosReq1(params){ //将axios对象封装 this.axios.post(‘/login’,…{params}); }; axiosReq2(params){ this.axios.post(‘/register’,…{params}); }; ··· ··· this.axios.all([axiosReq1(params),axiosReq2(params)…axiosReqX(params)]) .then(function(res1,res2…resX){ console.log(res1,res1); console.log(res2,res2); ... console.log(resX,resX); })二、 因为axios是vue基于es6的promise语法对ajax进行的封装，每个axios.get/post()就是一个promise对象，即axios.()内部可使用promise语法的return对回调函数进行执行。（具体es6及promise对象请移步至其他博客进行了解😉） this.axios.get(&apos;/login&apos;) .then((res) =&gt; { if (res.status) { ... console.log(res); }; return this.axios.get(&apos;/getDatas&apos;)； }) .then((res)=&gt;{ if (res.status) { console.log(res); } })]]></content>
       <categories>
         <category>vue组件化开发</category>
       </categories>
@@ -32,8 +44,8 @@
         <category>js基础</category>
       </categories>
       <tags>
-        <tag>js数组</tag>
         <tag>js基础</tag>
+        <tag>js数组</tag>
       </tags>
   </entry>
   <entry>
