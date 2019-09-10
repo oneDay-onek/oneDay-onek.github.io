@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-10T16:01:29.941Z</updated>
+  <updated>2019-09-10T16:05:38.710Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/2019/09/10/elementUI%E5%90%84%E4%B8%AA%E7%BB%84%E4%BB%B6%E5%9C%A8%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>/2019/09/10/elementUI各个组件在具体使用中的问题/</id>
     <published>2019-09-10T14:49:45.000Z</published>
-    <updated>2019-09-10T16:01:29.941Z</updated>
+    <updated>2019-09-10T16:05:38.710Z</updated>
     
     <summary type="html">
     
@@ -139,9 +139,9 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt
       <category term="js基础" scheme="/categories/js%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
-    
       <category term="js数组" scheme="/tags/js%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
