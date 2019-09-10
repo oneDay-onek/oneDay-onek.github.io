@@ -42,11 +42,13 @@
     <link href="/2019/09/09/copy/"/>
     <id>/2019/09/09/copy/</id>
     <published>2019-09-09T13:59:59.000Z</published>
-    <updated>2019-09-10T10:02:20.116Z</updated>
+    <updated>2019-09-10T10:04:58.472Z</updated>
     
     <summary type="html">
     
       &lt;img src=&quot;/09/copy/about_old.jpg&quot; width=&quot;800px&quot;&gt;
+
+&lt;img src=&quot;/09/copy/09/09/copy/about_old.jpg&quot;&gt;
 
 &lt;h2 id=&quot;js中-对象和数组的深浅拷贝&quot;&gt;&lt;a href=&quot;#js中-对象和数组的深浅拷贝&quot; class=&quot;headerlink&quot; title=&quot;js中 对象和数组的深浅拷贝&quot;&gt;&lt;/a&gt;js中 对象和数组的深浅拷贝&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;一般我们在将值从一个基本数据类型的变量赋值给另一个基本数据类型的变量时，简单的赋值即可实现，如：&lt;/p&gt;
