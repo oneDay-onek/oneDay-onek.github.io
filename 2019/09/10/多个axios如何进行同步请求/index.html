@@ -80,18 +80,18 @@
 
 
 
-<meta name="description" content="多个axios如何进行同步请求一、    使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。 axiosReq1(params){                //将axios对象封装     this.axios.post(‘/login’,…{params}); }; axiosReq2(params){     this.axios.post(‘/re">
+<meta name="description" content="多个axios如何进行同步请求 在我使用vue+axios进行开发的过程中，会碰到有两个异步请求，且其中一个请求需要另一个请求的返回值，那此时将两个异步的axios请求同步执行才是最好的方式。本文中整理了两种axios同步请求的方式。  一、    使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。 axiosReq1(params){">
 <meta name="keywords" content="vue组件化开发,axios">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多个axios如何进行同步请求">
 <meta property="og:url" content="/2019/09/10/多个axios如何进行同步请求/index.html">
 <meta property="og:site_name" content="K&#39;s 个人博客 2.0">
-<meta property="og:description" content="多个axios如何进行同步请求一、    使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。 axiosReq1(params){                //将axios对象封装     this.axios.post(‘/login’,…{params}); }; axiosReq2(params){     this.axios.post(‘/re">
+<meta property="og:description" content="多个axios如何进行同步请求 在我使用vue+axios进行开发的过程中，会碰到有两个异步请求，且其中一个请求需要另一个请求的返回值，那此时将两个异步的axios请求同步执行才是最好的方式。本文中整理了两种axios同步请求的方式。  一、    使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。 axiosReq1(params){">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-10T14:33:18.345Z">
+<meta property="og:updated_time" content="2019-09-17T09:08:35.390Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多个axios如何进行同步请求">
-<meta name="twitter:description" content="多个axios如何进行同步请求一、    使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。 axiosReq1(params){                //将axios对象封装     this.axios.post(‘/login’,…{params}); }; axiosReq2(params){     this.axios.post(‘/re">
+<meta name="twitter:description" content="多个axios如何进行同步请求 在我使用vue+axios进行开发的过程中，会碰到有两个异步请求，且其中一个请求需要另一个请求的返回值，那此时将两个异步的axios请求同步执行才是最好的方式。本文中整理了两种axios同步请求的方式。  一、    使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。 axiosReq1(params){">
 
 
 
@@ -378,7 +378,10 @@
       
 
       
-        <h2 id="多个axios如何进行同步请求"><a href="#多个axios如何进行同步请求" class="headerlink" title="多个axios如何进行同步请求"></a>多个axios如何进行同步请求</h2><p>一、<br>    使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。</p>
+        <h2 id="多个axios如何进行同步请求"><a href="#多个axios如何进行同步请求" class="headerlink" title="多个axios如何进行同步请求"></a>多个axios如何进行同步请求</h2><blockquote>
+<p>在我使用vue+axios进行开发的过程中，会碰到有两个异步请求，且其中一个请求需要另一个请求的返回值，那此时将两个异步的axios请求同步执行才是最好的方式。本文中整理了两种axios同步请求的方式。</p>
+</blockquote>
+<p>一、<br>    使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。</p>
 <pre><code>axiosReq1(params){                //将axios对象封装
     this.axios.post(‘/login’,…{params});
 };
