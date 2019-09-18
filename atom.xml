@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-17T09:06:20.485Z</updated>
+  <updated>2019-09-18T03:34:19.123Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mock在vue项目中的使用</title>
+    <link href="/2019/09/18/The-method-to-use-of-mock-in-vue/"/>
+    <id>/2019/09/18/The-method-to-use-of-mock-in-vue/</id>
+    <published>2019-09-18T03:27:05.000Z</published>
+    <updated>2019-09-18T03:34:19.123Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;作为一个vue的开发者，在后台接口和数据都没有的情况下想自测页面功能是一件比较苦恼的事情，当然可以在&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue组件化开发" scheme="/categories/vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="vue组件化开发" scheme="/tags/vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="前端假数据自测" scheme="/tags/%E5%89%8D%E7%AB%AF%E5%81%87%E6%95%B0%E6%8D%AE%E8%87%AA%E6%B5%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2019/09/18/hello-world/"/>
+    <id>/2019/09/18/hello-world/</id>
+    <published>2019-09-18T03:23:22.467Z</published>
+    <updated>2019-09-18T03:23:22.467Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="测试文章" scheme="/categories/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>elementUI各个组件在具体使用中的问题</title>
@@ -46,17 +101,13 @@
     <link href="/2019/09/10/%E5%A4%9A%E4%B8%AAaxios%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%90%8C%E6%AD%A5%E8%AF%B7%E6%B1%82/"/>
     <id>/2019/09/10/多个axios如何进行同步请求/</id>
     <published>2019-09-10T09:52:12.000Z</published>
-    <updated>2019-09-17T09:08:35.390Z</updated>
+    <updated>2019-09-17T09:17:33.014Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;多个axios如何进行同步请求&quot;&gt;&lt;a href=&quot;#多个axios如何进行同步请求&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;多个axios如何进行同步请求&quot;&gt;&lt;a href=&quot;#多个axios如何进行同步请求&quot; class=&quot;headerlink&quot; title=&quot;多个axios如何进行同步请求&quot;&gt;&lt;/a&gt;多个axios如何进行同步请求&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在我使用vue+axios进行开发的过程中，会碰到有两个异步请求，且其中一个请求需要另一个请求的返回值，那此时将两个异步的axios请求同步执行才是最好的方式。本文中整理了两种axios同步请求的方式。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -109,7 +160,7 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt
     <link href="/2019/09/05/Js%20Array%20and%20String/"/>
     <id>/2019/09/05/Js Array and String/</id>
     <published>2019-09-05T14:57:53.000Z</published>
-    <updated>2019-09-09T13:51:36.226Z</updated>
+    <updated>2019-09-18T03:19:32.802Z</updated>
     
     <summary type="html">
     
@@ -126,8 +177,8 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt
 &lt;li&gt;&lt;p&gt;不会改变原数组的方法: .concat(), .slice()。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&quot;push&quot;&gt;&lt;a href=&quot;#push&quot; class=&quot;headerlink&quot; title=&quot;push()&quot;&gt;&lt;/a&gt;push()&lt;/h3&gt;&lt;p&gt;push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; arr = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;arr.push([&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;]);  &lt;span class=&quot;comment&quot;&gt;//arr:[1,2,3,4,5,6,[7,8]]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                  &lt;span class=&quot;comment&quot;&gt;//如果插入的为数组，则插入的这个数组成为arr的最后一项&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; count = arr.push(&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;);   &lt;span class=&quot;comment&quot;&gt;//arr:[1,2,3,4,5,6,[7,8],9,10]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                              &lt;span class=&quot;comment&quot;&gt;//count:9  ==  返回值为改变后数组的长度&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;1）改变原数组的操作&quot;&gt;&lt;a href=&quot;#1）改变原数组的操作&quot; class=&quot;headerlink&quot; title=&quot;1）改变原数组的操作&quot;&gt;&lt;/a&gt;1）改变原数组的操作&lt;/h2&gt;&lt;h3 id=&quot;push&quot;&gt;&lt;a href=&quot;#push&quot; class=&quot;headerlink&quot; title=&quot;push()&quot;&gt;&lt;/a&gt;push()&lt;/h3&gt;&lt;p&gt;push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。&lt;/p&gt;
+&lt;h4 id=&quot;例子&quot;&gt;&lt;a href=&quot;#例子&quot; class=&quot;headerlink&quot; title=&quot;例子&quot;&gt;&lt;/a&gt;例子&lt;/h4&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; arr = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;arr.push([&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;]);  &lt;span class=&quot;comment&quot;&gt;//arr:[1,2,3,4,5,6,[7,8]]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                  &lt;span class=&quot;comment&quot;&gt;//如果插入的为数组，则插入的这个数组成为arr的最后一项&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; count = arr.push(&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;);   &lt;span class=&quot;comment&quot;&gt;//arr:[1,2,3,4,5,6,[7,8],9,10]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                              &lt;span class=&quot;comment&quot;&gt;//count:9  ==  返回值为改变后数组的长度&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -135,9 +186,9 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt
       <category term="js基础" scheme="/categories/js%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="js数组" scheme="/tags/js%E6%95%B0%E7%BB%84/"/>
-    
       <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="js数组" scheme="/tags/js%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -146,7 +197,7 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt
     <link href="/2019/09/04/my-first-article/"/>
     <id>/2019/09/04/my-first-article/</id>
     <published>2019-09-04T14:43:21.000Z</published>
-    <updated>2019-09-10T03:17:54.675Z</updated>
+    <updated>2019-09-18T03:23:26.802Z</updated>
     
     <summary type="html">
     
@@ -166,30 +217,7 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt
     </summary>
     
     
-    
-      <category term="测试文章" scheme="/tags/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="/2019/09/04/hello-world/"/>
-    <id>/2019/09/04/hello-world/</id>
-    <published>2019-09-04T06:35:14.387Z</published>
-    <updated>2019-09-04T06:35:14.387Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
+      <category term="测试文章" scheme="/categories/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
     
     
   </entry>

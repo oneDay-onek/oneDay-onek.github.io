@@ -271,7 +271,156 @@
             
   <section id="posts" class="posts-expand">
     
+        
+            
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="/2019/09/18/The-method-to-use-of-mock-in-vue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bro.K">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/person_icon.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="K's 个人博客 2.0">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/18/The-method-to-use-of-mock-in-vue/" itemprop="url">mock在vue项目中的使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-18T11:27:05+08:00">
+                2019-09-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue组件化开发/" itemprop="url" rel="index">
+                    <span itemprop="name">vue组件化开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
+      
+
+      
+        
+          
+            <p>作为一个vue的开发者，在后台接口和数据都没有的情况下想自测页面功能是一件比较苦恼的事情，当然可以在</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+        
+    
+        
+    
+        
+            
 
   
 
@@ -420,8 +569,10 @@
   </article>
 
 
+        
     
-      
+        
+            
 
   
 
@@ -528,42 +679,16 @@
 
       
         
-          
-            <h2 id="多个axios如何进行同步请求"><a href="#多个axios如何进行同步请求" class="headerlink" title="多个axios如何进行同步请求"></a>多个axios如何进行同步请求</h2><blockquote>
+          <h2 id="多个axios如何进行同步请求"><a href="#多个axios如何进行同步请求" class="headerlink" title="多个axios如何进行同步请求"></a>多个axios如何进行同步请求</h2><blockquote>
 <p>在我使用vue+axios进行开发的过程中，会碰到有两个异步请求，且其中一个请求需要另一个请求的返回值，那此时将两个异步的axios请求同步执行才是最好的方式。本文中整理了两种axios同步请求的方式。</p>
 </blockquote>
-<p>一、<br>    使用axios官方的axios.all()方法即可同步执行内部的多个异步axios操作。</p>
-<pre><code>axiosReq1(params){                //将axios对象封装
-    this.axios.post(‘/login’,…{params});
-};
-axiosReq2(params){
-    this.axios.post(‘/register’,…{params});
-};
-···
-···
-
-this.axios.all([axiosReq1(params),axiosReq2(params)…axiosReqX(params)])
-.then(function(res1,res2…resX){
-    console.log(res1,res1);
-    console.log(res2,res2);
-    ...
-    console.log(resX,resX);
-})</code></pre><p>二、<br>    因为axios是vue基于es6的promise语法对ajax进行的封装，每个axios.get/post()就是一个promise对象，即axios.()内部可使用promise语法的return对回调函数进行执行。（具体es6及promise对象请移步至其他博客进行了解😉）</p>
-<pre><code>this.axios.get(&apos;/login&apos;)    
-.then((res) =&gt; {
-    if (res.status) {
-        ...
-        console.log(res);
-    };
-    return this.axios.get(&apos;/getDatas&apos;)；
-
-})
-.then((res)=&gt;{
-    if (res.status) {
-        console.log(res);
-    }
-})</code></pre>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/10/多个axios如何进行同步请求/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -596,8 +721,10 @@ this.axios.all([axiosReq1(params),axiosReq2(params)…axiosReqX(params)])
   </article>
 
 
+        
     
-      
+        
+            
 
   
 
@@ -755,8 +882,10 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a</code></pre><bl
   </article>
 
 
+        
     
-      
+        
+            
 
   
 
@@ -876,8 +1005,8 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a</code></pre><bl
 <li><p>不会改变原数组的方法: .concat(), .slice()。</p>
 </li>
 </ol>
-<h3 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h3><p>push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line">arr.push([<span class="number">7</span>,<span class="number">8</span>]);  <span class="comment">//arr:[1,2,3,4,5,6,[7,8]]</span></span><br><span class="line">                  <span class="comment">//如果插入的为数组，则插入的这个数组成为arr的最后一项</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.push(<span class="number">9</span>,<span class="number">10</span>);   <span class="comment">//arr:[1,2,3,4,5,6,[7,8],9,10]</span></span><br><span class="line">                              <span class="comment">//count:9  ==  返回值为改变后数组的长度</span></span><br></pre></td></tr></table></figure>
+<h2 id="1）改变原数组的操作"><a href="#1）改变原数组的操作" class="headerlink" title="1）改变原数组的操作"></a>1）改变原数组的操作</h2><h3 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h3><p>push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。</p>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line">arr.push([<span class="number">7</span>,<span class="number">8</span>]);  <span class="comment">//arr:[1,2,3,4,5,6,[7,8]]</span></span><br><span class="line">                  <span class="comment">//如果插入的为数组，则插入的这个数组成为arr的最后一项</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.push(<span class="number">9</span>,<span class="number">10</span>);   <span class="comment">//arr:[1,2,3,4,5,6,[7,8],9,10]</span></span><br><span class="line">                              <span class="comment">//count:9  ==  返回值为改变后数组的长度</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/09/05/Js Array and String/#more" rel="contents">
@@ -917,277 +1046,9 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a</code></pre><bl
   </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/2019/09/04/my-first-article/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bro.K">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/person_icon.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="K's 个人博客 2.0">
-    </span>
-
-    
-      <header class="post-header">
-
         
+    
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/04/my-first-article/" itemprop="url">my first article</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-04T22:43:21+08:00">
-                2019-09-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>lalalalalalal</p>
-<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><blockquote>
-<p>感谢人生中每一位老师</p>
-</blockquote>
-<p> <strong>这是粗体</strong></p>
-<p> 这不是粗体</p>
-<p>  <a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a></p>
-<p> <del>短发短发短发</del> </p>
-<p><a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a></p>
-<blockquote>
-<p>我从来不梦想，我只是在努力认识现实；戏剧家洪深说：我的梦想是明年吃苦的能力比今年更强；鲁迅说：人生最大的痛苦是梦醒了无路可走；苏格拉底说：人类的幸福和欢乐在于奋斗，而最有价值的是为了理想而奋斗</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/04/my-first-article/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/2019/09/04/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bro.K">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/person_icon.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="K's 个人博客 2.0">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/04/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-04T14:35:14+08:00">
-                2019-09-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
     
   </section>
 
@@ -1237,7 +1098,7 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a</code></pre><bl
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1248,7 +1109,7 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a</code></pre><bl
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
