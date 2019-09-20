@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-18T03:34:19.123Z</updated>
+  <updated>2019-09-20T09:56:28.625Z</updated>
   <id>/</id>
   
   <author>
@@ -21,18 +21,11 @@
     <link href="/2019/09/18/The-method-to-use-of-mock-in-vue/"/>
     <id>/2019/09/18/The-method-to-use-of-mock-in-vue/</id>
     <published>2019-09-18T03:27:05.000Z</published>
-    <updated>2019-09-18T03:34:19.123Z</updated>
+    <updated>2019-09-20T09:56:28.625Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;作为一个vue的开发者，在后台接口和数据都没有的情况下想自测页面功能是一件比较苦恼的事情，当然可以在&lt;/p&gt;
-
-        
-      
+      &lt;p&gt;作为一个前后端分离的vue开发者，在后台接口和数据都没有的情况下想保证进度过着自测页面功能是一件比较苦恼的事情，当然可以在 *.vue文件的data中自行输入想要的JSON数据，但这样的情况过于麻烦，如果一个复杂的JSON需要改动，工作量和时间消耗是很高的，所以我们需要借用一个能够按自动生成符合你所定义规则的数据的插件或框架。本文将介绍mock.js，一个能够拦截ajax请求并生成随机数据的框架。&lt;/p&gt;
     
     </summary>
     
