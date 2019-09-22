@@ -67,7 +67,7 @@
 
 
 
-  <meta name="keywords" content="js数组,js基础,">
+  <meta name="keywords" content="js基础,js数组,">
 
 
 
@@ -80,18 +80,18 @@
 
 
 
-<meta name="description" content="本文主要介绍js中对数组和字符串的基本操作  一. 数组操作   概念  数组操作分为两类:  会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();  不会改变原数组的方法: .concat(), .slice()。   1）改变原数组的操作push()push()方法可向数组的末尾添加">
-<meta name="keywords" content="js数组,js基础">
+<meta name="description" content="本文主要介绍js中对数组和字符串的基本操作  一. 数组操作   概念  数组操作分为两类:  会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();  不会改变原数组的方法: .concat(), .slice(), .join()。   1）改变原数组的操作push()push()方法">
+<meta name="keywords" content="js基础,js数组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Js对数组的一些操作方法">
 <meta property="og:url" content="/2019/09/05/Js Array and String/index.html">
 <meta property="og:site_name" content="K&#39;s 个人博客 2.0">
-<meta property="og:description" content="本文主要介绍js中对数组和字符串的基本操作  一. 数组操作   概念  数组操作分为两类:  会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();  不会改变原数组的方法: .concat(), .slice()。   1）改变原数组的操作push()push()方法可向数组的末尾添加">
+<meta property="og:description" content="本文主要介绍js中对数组和字符串的基本操作  一. 数组操作   概念  数组操作分为两类:  会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();  不会改变原数组的方法: .concat(), .slice(), .join()。   1）改变原数组的操作push()push()方法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-18T03:19:32.802Z">
+<meta property="og:updated_time" content="2019-09-22T07:53:07.314Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Js对数组的一些操作方法">
-<meta name="twitter:description" content="本文主要介绍js中对数组和字符串的基本操作  一. 数组操作   概念  数组操作分为两类:  会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();  不会改变原数组的方法: .concat(), .slice()。   1）改变原数组的操作push()push()方法可向数组的末尾添加">
+<meta name="twitter:description" content="本文主要介绍js中对数组和字符串的基本操作  一. 数组操作   概念  数组操作分为两类:  会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();  不会改变原数组的方法: .concat(), .slice(), .join()。   1）改变原数组的操作push()push()方法">
 
 
 
@@ -388,7 +388,7 @@
 <ol>
 <li><p>会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();</p>
 </li>
-<li><p>不会改变原数组的方法: .concat(), .slice()。</p>
+<li><p>不会改变原数组的方法: .concat(), .slice(), .join()。</p>
 </li>
 </ol>
 <h2 id="1）改变原数组的操作"><a href="#1）改变原数组的操作" class="headerlink" title="1）改变原数组的操作"></a>1）改变原数组的操作</h2><h3 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h3><p>push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。</p>
@@ -447,7 +447,38 @@
 <p><strong>*tips</strong>:因concat()不会改变任何数组就能复制出一个与原数组一摸一样的数组，所以多用来对数组进行深拷贝操作</p>
 </blockquote>
 <pre><code>var arr1 = [1,2,3];
-var arr2 = [].concat(arr1);     //将arr1的值与空数组拼接，意在将arr1的值复制一份。</code></pre>
+var arr2 = [].concat(arr1);     //将arr1的值与空数组拼接，意在将arr1的值复制一份。</code></pre><h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><p>slice() 方法用于返回一个数组的选定元素,并存放在一个新数组中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法： arr.slice(start,end);</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">start</td>
+<td align="center">必填。用来指定选取的起点，从索引为start的项开始。</td>
+</tr>
+<tr>
+<td align="center">end</td>
+<td align="center">选填。用来指定选取的终点，选取到索引为end的项的前一项，不包括索引为end的项本身。如不填，则选取到数组的最后一位。</td>
+</tr>
+</tbody></table>
+<h4 id="例子-8"><a href="#例子-8" class="headerlink" title="例子"></a>例子</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1,2,3,4,5,6];</span><br><span class="line"></span><br><span class="line">var arr2 = arr1.slice(1);</span><br><span class="line">//arr2:[2,3,4,5,6]</span><br><span class="line">var arr3 = arr1.slice(2,4);</span><br><span class="line">//arr3 = [3,4]</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-字符串操作"><a href="#2-字符串操作" class="headerlink" title="2. 字符串操作"></a>2. 字符串操作</h2><blockquote>
+<p>  概念</p>
+</blockquote>
+<p>数组操作分为两类:</p>
+<ol>
+<li><p>会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();</p>
+</li>
+<li><p>不会改变原数组的方法: .concat(), .slice()。</p>
+</li>
+</ol>
+
       
     </div>
     
@@ -464,9 +495,9 @@ var arr2 = [].concat(arr1);     //将arr1的值与空数组拼接，意在将arr
       
         <div class="post-tags">
           
-            <a href="/tags/js数组/" rel="tag"># js数组</a>
-          
             <a href="/tags/js基础/" rel="tag"># js基础</a>
+          
+            <a href="/tags/js数组/" rel="tag"># js数组</a>
           
         </div>
       
@@ -570,7 +601,7 @@ var arr2 = [].concat(arr1);     //将arr1的值与空数组拼接，意在将arr
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -592,7 +623,7 @@ var arr2 = [].concat(arr1);     //将arr1的值与空数组拼接，意在将arr
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -632,7 +663,7 @@ var arr2 = [].concat(arr1);     //将arr1的值与空数组拼接，意在将arr
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-数组操作"><span class="nav-text">一. 数组操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1）改变原数组的操作"><span class="nav-text">1）改变原数组的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#push"><span class="nav-text">push()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pop"><span class="nav-text">pop()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-1"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shift"><span class="nav-text">shift()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-2"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unshift"><span class="nav-text">unshift()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-3"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#splice"><span class="nav-text">splice()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-4"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse"><span class="nav-text">reverse()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-5"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-text">sort()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-6"><span class="nav-text">例子</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2）不会改变原数组的操作"><span class="nav-text">2）不会改变原数组的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#concat"><span class="nav-text">concat()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-7"><span class="nav-text">例子</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-数组操作"><span class="nav-text">一. 数组操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1）改变原数组的操作"><span class="nav-text">1）改变原数组的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#push"><span class="nav-text">push()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pop"><span class="nav-text">pop()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-1"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shift"><span class="nav-text">shift()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-2"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unshift"><span class="nav-text">unshift()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-3"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#splice"><span class="nav-text">splice()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-4"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse"><span class="nav-text">reverse()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-5"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-text">sort()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-6"><span class="nav-text">例子</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2）不会改变原数组的操作"><span class="nav-text">2）不会改变原数组的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#concat"><span class="nav-text">concat()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-7"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#slice"><span class="nav-text">slice()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-8"><span class="nav-text">例子</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-字符串操作"><span class="nav-text">2. 字符串操作</span></a></li></ol></div>
             
 
           </div>

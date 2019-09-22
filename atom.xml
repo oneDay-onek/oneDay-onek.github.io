@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-22T07:33:00.201Z</updated>
+  <updated>2019-09-22T09:10:23.505Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>遍历Object的几种方法</title>
+    <link href="/2019/09/22/%E9%81%8D%E5%8E%86Object%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
+    <id>/2019/09/22/遍历Object的几种方法/</id>
+    <published>2019-09-22T08:28:29.000Z</published>
+    <updated>2019-09-22T09:10:23.505Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;js遍历Object的几种方法&quot;&gt;&lt;a href=&quot;#js遍历Object的几种方法&quot; class=&quot;headerlink&quot; title=&quot;js遍历Object的几种方法&quot;&gt;&lt;/a&gt;js遍历Object的几种方法&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="js基础" scheme="/categories/js%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="js遍历Object" scheme="/tags/js%E9%81%8D%E5%8E%86Object/"/>
+    
+  </entry>
   
   <entry>
     <title>mock在vue项目中的使用</title>
@@ -119,7 +148,7 @@
     <link href="/2019/09/09/copy/"/>
     <id>/2019/09/09/copy/</id>
     <published>2019-09-09T13:59:59.000Z</published>
-    <updated>2019-09-10T10:17:06.756Z</updated>
+    <updated>2019-09-22T08:12:16.550Z</updated>
     
     <summary type="html">
     
@@ -153,7 +182,7 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt
     <link href="/2019/09/05/Js%20Array%20and%20String/"/>
     <id>/2019/09/05/Js Array and String/</id>
     <published>2019-09-05T14:57:53.000Z</published>
-    <updated>2019-09-18T03:19:32.802Z</updated>
+    <updated>2019-09-22T07:53:07.314Z</updated>
     
     <summary type="html">
     
@@ -167,7 +196,7 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;不会改变原数组的方法: .concat(), .slice()。&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;不会改变原数组的方法: .concat(), .slice(), .join()。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&quot;1）改变原数组的操作&quot;&gt;&lt;a href=&quot;#1）改变原数组的操作&quot; class=&quot;headerlink&quot; title=&quot;1）改变原数组的操作&quot;&gt;&lt;/a&gt;1）改变原数组的操作&lt;/h2&gt;&lt;h3 id=&quot;push&quot;&gt;&lt;a href=&quot;#push&quot; class=&quot;headerlink&quot; title=&quot;push()&quot;&gt;&lt;/a&gt;push()&lt;/h3&gt;&lt;p&gt;push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。&lt;/p&gt;
@@ -179,9 +208,9 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt
       <category term="js基础" scheme="/categories/js%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="js数组" scheme="/tags/js%E6%95%B0%E7%BB%84/"/>
-    
       <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="js数组" scheme="/tags/js%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
