@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-23T09:55:19.443Z</updated>
+  <updated>2019-09-23T10:04:22.680Z</updated>
   <id>/</id>
   
   <author>
@@ -21,17 +21,14 @@
     <link href="/2019/09/23/vue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC/"/>
     <id>/2019/09/23/vue父子组件之间传值/</id>
     <published>2019-09-23T09:53:05.000Z</published>
-    <updated>2019-09-23T09:55:19.443Z</updated>
+    <updated>2019-09-23T10:04:22.680Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;vue父子组件之间传值&quot;&gt;&lt;a href=&quot;#vue父子组件之间传值&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h1 id=&quot;vue父子组件之间传值&quot;&gt;&lt;a href=&quot;#vue父子组件之间传值&quot; class=&quot;headerlink&quot; title=&quot;vue父子组件之间传值&quot;&gt;&lt;/a&gt;vue父子组件之间传值&lt;/h1&gt;&lt;p&gt;在个人的vue项目实际开发中，不会常遇到父子组件传值的情况，即使涉及到也会使用vuex或者webStorage来解决。但当随着工作不断深入和开展，普通的vue项目书写方式不足以应对稍大型的或者有许多复用型组件的项目，编写一个vue组件库成了当下或者日后的一个比较好的选择，尤其是UI组件。但是编写vue组件库的基本功就是基于父子组件传值来进行开发的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;vue组件之间传值只可由父传向子，不能由子传向父。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -48,17 +45,18 @@
     <link href="/2019/09/23/vue-router%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82/"/>
     <id>/2019/09/23/vue-router路由传参/</id>
     <published>2019-09-23T09:50:27.000Z</published>
-    <updated>2019-09-23T09:52:32.492Z</updated>
+    <updated>2019-09-23T10:04:55.309Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;vue-router路由传参&quot;&gt;&lt;a href=&quot;#vue-router路由传参&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h1 id=&quot;vue-router路由传参&quot;&gt;&lt;a href=&quot;#vue-router路由传参&quot; class=&quot;headerlink&quot; title=&quot;vue-router路由传参&quot;&gt;&lt;/a&gt;vue-router路由传参&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;*tip&lt;/code&gt;:在vue项目中，有时会有出现 连续路由都用到同一或同一些数据的情况出现，此时使用vue-router进行传参是可行的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;vue-router传参的方式分为两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;params传参：参数透明，但刷新页面会丢失数据。&lt;/li&gt;
+&lt;li&gt;query传参：参数在url之后，但刷新页面不会丢失数据。&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -239,9 +237,9 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt
       <category term="js基础" scheme="/categories/js%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
-    
       <category term="js数组" scheme="/tags/js%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   

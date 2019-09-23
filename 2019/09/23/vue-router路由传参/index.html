@@ -80,18 +80,18 @@
 
 
 
-<meta name="description" content="vue-router路由传参 *tip:在vue项目中，有时会有出现 连续路由都用到同一或同一些数据的情况出现，此时使用vue-router进行传参是可行的。  vue-router传参的方式分为两种：  params传参：参数透明，但刷新页面会丢失数据。 query传参：参数在url之后，但刷新页面不会丢失数据。  1、配置router.js1234567891011121314export d">
+<meta name="description" content="vue-router路由传参 *tip:在vue项目中，有时会有出现 连续路由都用到同一或同一些数据的情况出现，此时使用vue-router进行传参是可行的。  vue-router传参的方式分为两种：  params传参：参数透明，但刷新页面会丢失数据。 query传参：参数在url之后，但刷新页面不会丢失数据。">
 <meta name="keywords" content="vue组件化开发,vue-router">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue-router路由传参">
 <meta property="og:url" content="/2019/09/23/vue-router路由传参/index.html">
 <meta property="og:site_name" content="K&#39;s 个人博客 2.0">
-<meta property="og:description" content="vue-router路由传参 *tip:在vue项目中，有时会有出现 连续路由都用到同一或同一些数据的情况出现，此时使用vue-router进行传参是可行的。  vue-router传参的方式分为两种：  params传参：参数透明，但刷新页面会丢失数据。 query传参：参数在url之后，但刷新页面不会丢失数据。  1、配置router.js1234567891011121314export d">
+<meta property="og:description" content="vue-router路由传参 *tip:在vue项目中，有时会有出现 连续路由都用到同一或同一些数据的情况出现，此时使用vue-router进行传参是可行的。  vue-router传参的方式分为两种：  params传参：参数透明，但刷新页面会丢失数据。 query传参：参数在url之后，但刷新页面不会丢失数据。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-23T09:52:32.492Z">
+<meta property="og:updated_time" content="2019-09-23T10:04:55.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-router路由传参">
-<meta name="twitter:description" content="vue-router路由传参 *tip:在vue项目中，有时会有出现 连续路由都用到同一或同一些数据的情况出现，此时使用vue-router进行传参是可行的。  vue-router传参的方式分为两种：  params传参：参数透明，但刷新页面会丢失数据。 query传参：参数在url之后，但刷新页面不会丢失数据。  1、配置router.js1234567891011121314export d">
+<meta name="twitter:description" content="vue-router路由传参 *tip:在vue项目中，有时会有出现 连续路由都用到同一或同一些数据的情况出现，此时使用vue-router进行传参是可行的。  vue-router传参的方式分为两种：  params传参：参数透明，但刷新页面会丢失数据。 query传参：参数在url之后，但刷新页面不会丢失数据。">
 
 
 
@@ -386,6 +386,8 @@
 <li>params传参：参数透明，但刷新页面会丢失数据。</li>
 <li>query传参：参数在url之后，但刷新页面不会丢失数据。</li>
 </ul>
+<a id="more"></a>
+
 <h2 id="1、配置router-js"><a href="#1、配置router-js" class="headerlink" title="1、配置router.js"></a>1、配置router.js</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">    routes:[</span><br><span class="line">        &#123;</span><br><span class="line">            path:&apos;/pageFrom&apos;,</span><br><span class="line">            name:&apos;pageFrom&apos;,</span><br><span class="line">            component:()=&gt;import ...</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            path:&apos;/pageTO&apos;,</span><br><span class="line">            name:&apos;pageTo&apos;,</span><br><span class="line">            component:()=&gt;import ...</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <h2 id="2、使用"><a href="#2、使用" class="headerlink" title="2、使用"></a>2、使用</h2><h3 id="1）params传参"><a href="#1）params传参" class="headerlink" title="1）params传参"></a>1）params传参</h3><p>传递参数：使用<code>$router</code></p>

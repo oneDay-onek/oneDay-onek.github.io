@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[vue父子组件之间传值]]></title>
     <url>%2F2019%2F09%2F23%2Fvue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC%2F</url>
-    <content type="text"><![CDATA[vue父子组件之间传值 vue组件之间传值只可由父传向子，不能由子传向父。 父子组件传值的形式如下。 在vue项目中新建两个.vue文件。 1234567891011121314151617&lt;!-- 此为父组件的写法 --&gt;&lt;template&gt; &lt;!-- 此处使用“：(v-on)”方式绑定的为传到子组件的值，“@(v-bind)”方式绑定的为传到子组件并可供其调用的方法。 --&gt; &lt;child :childData = &quot;fatherData&quot; @changeData = &quot;changeData&quot;&gt;&lt;/child&gt;&lt;/template&gt;&lt;script&gt; data()&#123; return &#123; fatherData:&apos;word&apos;, &#125; &#125;, methods:&#123; changeData(str)&#123; this.fatherData = str; &#125; &#125;&lt;/script&gt; 另一个vue文件用来写 123456789101112131415161718192021222324&lt;!-- 此为子组件的写法 --&gt;&lt;template&gt; &lt;div&gt; &#123;&#123; cData &#125;&#125; &lt;br /&gt; &lt;button @click = &quot;setData&quot;&gt;change data to &quot;Hello World!&quot;&lt;button&gt; &lt;/div&gt;&lt;/tamplate&gt;&lt;script&gt; props:[&apos;childData&apos;], computed:&#123; /* 此处可以不声明，this.childData也可直接获传父组件来的值，只不过再有这样一层计算属性的包装可以省去对子组件中用来接收父组件值的变量的修改。*/ cData()&#123; return childData; &#125; &#125;, methods:&#123; /* 此方法为子组件中声明的方法，再调用vue定义的$emit即可调用父组件传过来的方法。 */ setData()&#123; this.$emit(&apos;changeData&apos;,&apos;Hello World!&apos;); &#125; &#125;&lt;/script&gt; 子组件调用父组件方法以传值或操作父组件变量。其中子组件中的setData()方法调用的就是父组件中的changeData()方法。在子组件调用父组件方法的写法为：this.$emit([functionName],[params])。 父组件的值在子组件可以显示但不能做更改，但是借由this.$emit就可以达到操作父元素变量的操作，或者传值到父组件。]]></content>
+    <content type="text"><![CDATA[vue父子组件之间传值在个人的vue项目实际开发中，不会常遇到父子组件传值的情况，即使涉及到也会使用vuex或者webStorage来解决。但当随着工作不断深入和开展，普通的vue项目书写方式不足以应对稍大型的或者有许多复用型组件的项目，编写一个vue组件库成了当下或者日后的一个比较好的选择，尤其是UI组件。但是编写vue组件库的基本功就是基于父子组件传值来进行开发的。 vue组件之间传值只可由父传向子，不能由子传向父。 父子组件传值的形式如下。 在vue项目中新建两个.vue文件。 1234567891011121314151617&lt;!-- 此为父组件的写法 --&gt;&lt;template&gt; &lt;!-- 此处使用“：(v-on)”方式绑定的为传到子组件的值，“@(v-bind)”方式绑定的为传到子组件并可供其调用的方法。 --&gt; &lt;child :childData = &quot;fatherData&quot; @changeData = &quot;changeData&quot;&gt;&lt;/child&gt;&lt;/template&gt;&lt;script&gt; data()&#123; return &#123; fatherData:&apos;word&apos;, &#125; &#125;, methods:&#123; changeData(str)&#123; this.fatherData = str; &#125; &#125;&lt;/script&gt; 另一个vue文件用来写 123456789101112131415161718192021222324&lt;!-- 此为子组件的写法 --&gt;&lt;template&gt; &lt;div&gt; &#123;&#123; cData &#125;&#125; &lt;br /&gt; &lt;button @click = &quot;setData&quot;&gt;change data to &quot;Hello World!&quot;&lt;button&gt; &lt;/div&gt;&lt;/tamplate&gt;&lt;script&gt; props:[&apos;childData&apos;], computed:&#123; /* 此处可以不声明，this.childData也可直接获传父组件来的值，只不过再有这样一层计算属性的包装可以省去对子组件中用来接收父组件值的变量的修改。*/ cData()&#123; return childData; &#125; &#125;, methods:&#123; /* 此方法为子组件中声明的方法，再调用vue定义的$emit即可调用父组件传过来的方法。 */ setData()&#123; this.$emit(&apos;changeData&apos;,&apos;Hello World!&apos;); &#125; &#125;&lt;/script&gt; 子组件调用父组件方法以传值或操作父组件变量。其中子组件中的setData()方法调用的就是父组件中的changeData()方法。在子组件调用父组件方法的写法为：this.$emit([functionName],[params])。 父组件的值在子组件可以显示但不能做更改，但是借由this.$emit就可以达到操作父元素变量的操作，或者传值到父组件。]]></content>
       <tags>
         <tag>vue组件化开发</tag>
         <tag>vue组件传值</tag>
@@ -89,8 +89,8 @@
         <category>js基础</category>
       </categories>
       <tags>
-        <tag>js基础</tag>
         <tag>js数组</tag>
+        <tag>js基础</tag>
       </tags>
   </entry>
 </search>
