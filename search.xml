@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vue父子组件之间传值]]></title>
+    <url>%2F2019%2F09%2F23%2Fvue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[vue父子组件之间传值 vue组件之间传值只可由父传向子，不能由子传向父。 父子组件传值的形式如下。 在vue项目中新建两个.vue文件。 1234567891011121314151617&lt;!-- 此为父组件的写法 --&gt;&lt;template&gt; &lt;!-- 此处使用“：(v-on)”方式绑定的为传到子组件的值，“@(v-bind)”方式绑定的为传到子组件并可供其调用的方法。 --&gt; &lt;child :childData = &quot;fatherData&quot; @changeData = &quot;changeData&quot;&gt;&lt;/child&gt;&lt;/template&gt;&lt;script&gt; data()&#123; return &#123; fatherData:&apos;word&apos;, &#125; &#125;, methods:&#123; changeData(str)&#123; this.fatherData = str; &#125; &#125;&lt;/script&gt; 另一个vue文件用来写 123456789101112131415161718192021222324&lt;!-- 此为子组件的写法 --&gt;&lt;template&gt; &lt;div&gt; &#123;&#123; cData &#125;&#125; &lt;br /&gt; &lt;button @click = &quot;setData&quot;&gt;change data to &quot;Hello World!&quot;&lt;button&gt; &lt;/div&gt;&lt;/tamplate&gt;&lt;script&gt; props:[&apos;childData&apos;], computed:&#123; /* 此处可以不声明，this.childData也可直接获传父组件来的值，只不过再有这样一层计算属性的包装可以省去对子组件中用来接收父组件值的变量的修改。*/ cData()&#123; return childData; &#125; &#125;, methods:&#123; /* 此方法为子组件中声明的方法，再调用vue定义的$emit即可调用父组件传过来的方法。 */ setData()&#123; this.$emit(&apos;changeData&apos;,&apos;Hello World!&apos;); &#125; &#125;&lt;/script&gt; 子组件调用父组件方法以传值或操作父组件变量。其中子组件中的setData()方法调用的就是父组件中的changeData()方法。在子组件调用父组件方法的写法为：this.$emit([functionName],[params])。 父组件的值在子组件可以显示但不能做更改，但是借由this.$emit就可以达到操作父元素变量的操作，或者传值到父组件。]]></content>
+      <tags>
+        <tag>vue组件化开发</tag>
+        <tag>vue组件传值</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vue-router路由传参]]></title>
+    <url>%2F2019%2F09%2F23%2Fvue-router%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82%2F</url>
+    <content type="text"><![CDATA[vue-router路由传参 *tip:在vue项目中，有时会有出现 连续路由都用到同一或同一些数据的情况出现，此时使用vue-router进行传参是可行的。 vue-router传参的方式分为两种： params传参：参数透明，但刷新页面会丢失数据。 query传参：参数在url之后，但刷新页面不会丢失数据。 1、配置router.js1234567891011121314export default new Router(&#123; routes:[ &#123; path:&apos;/pageFrom&apos;, name:&apos;pageFrom&apos;, component:()=&gt;import ... &#125;, &#123; path:&apos;/pageTO&apos;, name:&apos;pageTo&apos;, component:()=&gt;import ... &#125; ]&#125;); 2、使用1）params传参传递参数：使用$router 123456789101112131415161718192021222324&lt;!-- pageFrom 页面 --&gt;&lt;template&gt; &lt;button @click=&quot;&quot;&gt;Go next page&lt;/button&gt;&lt;/template&gt;&lt;script&gt;export default&#123; methods:&#123; goNextPage()&#123; /** *使用params传参时，push()方法传的是路由的name而不是path。 *params 对象用材存放需要传的值。 *params 对象中的数据是透明的，但是在刷新页面后数据会丢失。 */ this.$router.push(&#123; name:&quot;pageTo&quot;, params:&#123; id:1, name:&quot;Abbott&quot; &#125; &#125;) &#125; &#125;&#125;&lt;/script&gt; 接收参数：使用$route 1234567891011121314151617181920212223242526272829303132&lt;!-- pageTo 页面 --&gt;&lt;template&gt; &lt;div&gt;&lt;/div&gt;&lt;/template&gt;&lt;script&gt;export default&#123; data()&#123; return &#123; id:&quot;&quot;, name:&quot;&quot; &#125; &#125;, methods:&#123; getData()&#123; /** *接收params传参时，传递的参数全部储存在this.$toute.params中 *直接使用传过来的参数名获取值 */ this.id = this.$route.params.id; this.name = this.$route.params.name; console.log(`id:$&#123; this.id &#125;`); // =&gt; 1 console.log(`name:$&#123; this.name &#125;`); // =&gt; &apos;Abbott&apos; &#125; &#125;, created()&#123; this.getData(); &#125;&#125;&lt;/script&gt; 2）query传参传递参数：使用$router 123456789101112131415161718192021222324&lt;!-- pageFrom 页面 --&gt;&lt;template&gt; &lt;button @click=&quot;&quot;&gt;Go next page&lt;/button&gt;&lt;/template&gt;&lt;script&gt;export default&#123; methods:&#123; goNextPage()&#123; /** *使用query传参时，push()方法传的可以是路由的name或者path。 *query 对象用材存放需要传的值。 *query 对象中的数据不是透明的，会在url之后存放，而且刷新页面不会丢失数据，仍可获取到。 */ this.$router.push(&#123; name:&quot;pageTo&quot;, query:&#123; id:1, name:&quot;Abbott&quot; &#125; &#125;) &#125; &#125;&#125;&lt;/script&gt; 接收参数：使用$route 1234567891011121314151617181920212223242526272829303132&lt;!-- pageTo 页面 --&gt;&lt;template&gt; &lt;div&gt;&lt;/div&gt;&lt;/template&gt;&lt;script&gt;export default&#123; data()&#123; return &#123; id:&quot;&quot;, name:&quot;&quot; &#125; &#125;, methods:&#123; getData()&#123; /** *接收query传参时，传递的参数全部储存在this.$toute.query中 *直接使用传过来的参数名获取值 */ this.id = this.$route.query.id; this.name = this.$route.query.name; console.log(`id:$&#123; this.id &#125;`); // =&gt; 1 console.log(`name:$&#123; this.name &#125;`); // =&gt; &apos;Abbott&apos; &#125; &#125;, created()&#123; this.getData(); &#125;&#125;&lt;/script&gt; 总结一下 params方式传参数据透明，有一定安全性但是在刷新页面后数据会丢失； query方式传参数据不透明，数据跟在url之后，会有一定安全风险但是在刷新页面之后数据不会丢失。]]></content>
+      <categories>
+        <category>vue组件化开发</category>
+      </categories>
+      <tags>
+        <tag>vue组件化开发</tag>
+        <tag>vue-router</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[遍历Object的几种方法]]></title>
     <url>%2F2019%2F09%2F22%2F%E9%81%8D%E5%8E%86Object%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[js遍历Object的几种方法1. for……in123456789const obj = &#123; id:1, name:&apos;Abbott&apos;, age:18&#125;;for(let key in obj)&#123; console.log(`$&#123;key&#125; --- $&#123;obj[key]&#125;`);&#125;; 输出结果为： id --- 1 name --- Abbott age --- 182. Object.keys(obj) &amp; Object.values(obj)参数： obj为将要遍历其可枚举属性并返回数组的对象。 12345678const obj = &#123; id:1, name:&apos;Abbott&apos;, age:18&#125;;console.log(Object.keys(obj));console.log(Object.values(obj)); 输出结果： //obj的key组成的数组 [&quot;id&quot;,&quot;name&quot;,&quot;age&quot;]; //obj的value组成的数组 [&quot;1&quot;,&quot;Abbott&quot;,&quot;18&quot;];3. Object.getOwnPropertyNames(obj)返回一个数组，包括obj中所有属性，包括不可枚举的。 遍历Object.getOwnPropertyNames(obj)的返回值可获得key、value。 12345678const obj = &#123; id:1, name:&apos;zhangsan&apos;, age:18 &#125;;Object.getOwnPropertyNames(obj).forEach(function(key)&#123; console.log(key+&apos;---&apos;+obj[key]);&#125;); 输出结果： id --- 1 name --- Abbott age --- 18]]></content>
@@ -23,14 +44,6 @@
         <tag>vue组件化开发</tag>
         <tag>前端假数据自测</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F09%2F18%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-      <categories>
-        <category>测试文章</category>
-      </categories>
   </entry>
   <entry>
     <title><![CDATA[elementUI各个组件在具体使用中的问题]]></title>
@@ -79,13 +92,5 @@
         <tag>js基础</tag>
         <tag>js数组</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[my first article]]></title>
-    <url>%2F2019%2F09%2F04%2Fmy-first-article%2F</url>
-    <content type="text"><![CDATA[lalalalalalal 这是一级标题这是二级标题这是三级标题 感谢人生中每一位老师 这是粗体 这不是粗体 百度 短发短发短发 https://www.baidu.com 我从来不梦想，我只是在努力认识现实；戏剧家洪深说：我的梦想是明年吃苦的能力比今年更强；鲁迅说：人生最大的痛苦是梦醒了无路可走；苏格拉底说：人类的幸福和欢乐在于奋斗，而最有价值的是为了理想而奋斗 在Js中通常使用console.log(&quot;&quot;)的方式在控制台打印数据 123function add(a,b) &#123; return a+b;//返回a与b相加的值&#125; 序号 名称 年龄 1 张三 18 2 李四 18 3 王五 18 语文 数学 英语 无序列表 首个title 二级title 有序列表 首个title 二级title 三级title]]></content>
-      <categories>
-        <category>测试文章</category>
-      </categories>
   </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-22T09:10:23.505Z</updated>
+  <updated>2019-09-23T09:55:19.443Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue父子组件之间传值</title>
+    <link href="/2019/09/23/vue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC/"/>
+    <id>/2019/09/23/vue父子组件之间传值/</id>
+    <published>2019-09-23T09:53:05.000Z</published>
+    <updated>2019-09-23T09:55:19.443Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;vue父子组件之间传值&quot;&gt;&lt;a href=&quot;#vue父子组件之间传值&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="vue组件化开发" scheme="/tags/vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="vue组件传值" scheme="/tags/vue%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue-router路由传参</title>
+    <link href="/2019/09/23/vue-router%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82/"/>
+    <id>/2019/09/23/vue-router路由传参/</id>
+    <published>2019-09-23T09:50:27.000Z</published>
+    <updated>2019-09-23T09:52:32.492Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;vue-router路由传参&quot;&gt;&lt;a href=&quot;#vue-router路由传参&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue组件化开发" scheme="/categories/vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="vue组件化开发" scheme="/tags/vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="vue-router" scheme="/tags/vue-router/"/>
+    
+  </entry>
   
   <entry>
     <title>遍历Object的几种方法</title>
@@ -65,31 +121,6 @@
       <category term="vue组件化开发" scheme="/tags/vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
     
       <category term="前端假数据自测" scheme="/tags/%E5%89%8D%E7%AB%AF%E5%81%87%E6%95%B0%E6%8D%AE%E8%87%AA%E6%B5%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="/2019/09/18/hello-world/"/>
-    <id>/2019/09/18/hello-world/</id>
-    <published>2019-09-18T03:23:22.467Z</published>
-    <updated>2019-09-18T03:23:22.467Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="测试文章" scheme="/categories/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
-    
     
   </entry>
   
@@ -211,36 +242,6 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt
       <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
     
       <category term="js数组" scheme="/tags/js%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>my first article</title>
-    <link href="/2019/09/04/my-first-article/"/>
-    <id>/2019/09/04/my-first-article/</id>
-    <published>2019-09-04T14:43:21.000Z</published>
-    <updated>2019-09-18T03:23:26.802Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;lalalalalalal&lt;/p&gt;
-&lt;h1 id=&quot;这是一级标题&quot;&gt;&lt;a href=&quot;#这是一级标题&quot; class=&quot;headerlink&quot; title=&quot;这是一级标题&quot;&gt;&lt;/a&gt;这是一级标题&lt;/h1&gt;&lt;h2 id=&quot;这是二级标题&quot;&gt;&lt;a href=&quot;#这是二级标题&quot; class=&quot;headerlink&quot; title=&quot;这是二级标题&quot;&gt;&lt;/a&gt;这是二级标题&lt;/h2&gt;&lt;h3 id=&quot;这是三级标题&quot;&gt;&lt;a href=&quot;#这是三级标题&quot; class=&quot;headerlink&quot; title=&quot;这是三级标题&quot;&gt;&lt;/a&gt;这是三级标题&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;感谢人生中每一位老师&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt; &lt;strong&gt;这是粗体&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt; 这不是粗体&lt;/p&gt;
-&lt;p&gt;  &lt;a href=&quot;https://www.baidu.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;百度&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; &lt;del&gt;短发短发短发&lt;/del&gt; &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.baidu.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.baidu.com&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我从来不梦想，我只是在努力认识现实；戏剧家洪深说：我的梦想是明年吃苦的能力比今年更强；鲁迅说：人生最大的痛苦是梦醒了无路可走；苏格拉底说：人类的幸福和欢乐在于奋斗，而最有价值的是为了理想而奋斗&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="测试文章" scheme="/categories/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
-    
     
   </entry>
   
