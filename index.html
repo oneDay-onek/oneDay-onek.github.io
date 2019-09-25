@@ -366,8 +366,7 @@ op1=>operation: 执行任务队列中的事件
 cond=>condition: 任务队列中是否存在事件？
 sub=>subroutine: 事件队列
 
-st->op->cond(no)
-cond(no)->op1->op
+st->op->cond(no)->op1->op
 cond(yes)->op
 sub->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>
           
