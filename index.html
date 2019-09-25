@@ -285,6 +285,135 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="/2019/09/25/js运行机制/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bro.K">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/person_icon.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="K's 个人博客 2.0">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/25/js运行机制/" itemprop="url">js运行机制</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-25T10:20:45+08:00">
+                2019-09-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>以下是主线程和任务队列的关系示意图：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">mainThread[主线程完成执行栈内的任务]--&gt;check[检查任务队列里是否有可执行的事件]</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start</span><br><span class="line">op=&gt;operation: Your Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+        
+    
+        
+            
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/2019/09/23/vue父子组件之间传值/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -667,30 +796,19 @@
 
       
         
-          
-            <h1 id="js遍历Object的几种方法"><a href="#js遍历Object的几种方法" class="headerlink" title="js遍历Object的几种方法"></a>js遍历Object的几种方法</h1><h2 id="1-for……in"><a href="#1-for……in" class="headerlink" title="1. for……in"></a>1. for……in</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123;</span><br><span class="line">    id:1,</span><br><span class="line">    name:&apos;Abbott&apos;,</span><br><span class="line">    age:18</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">for(let key in obj)&#123;</span><br><span class="line">    console.log(`$&#123;key&#125; --- $&#123;obj[key]&#125;`);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h1 id="js遍历Object的几种方法"><a href="#js遍历Object的几种方法" class="headerlink" title="js遍历Object的几种方法"></a>js遍历Object的几种方法</h1><h2 id="1-for……in"><a href="#1-for……in" class="headerlink" title="1. for……in"></a>1. for……in</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123;</span><br><span class="line">    id:1,</span><br><span class="line">    name:&apos;Abbott&apos;,</span><br><span class="line">    age:18</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">for(let key in obj)&#123;</span><br><span class="line">    console.log(`$&#123;key&#125; --- $&#123;obj[key]&#125;`);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <p>输出结果为： </p>
 <pre><code>id --- 1  
 name --- Abbott
-age --- 18</code></pre><h2 id="2-Object-keys-obj-amp-Object-values-obj"><a href="#2-Object-keys-obj-amp-Object-values-obj" class="headerlink" title="2. Object.keys(obj) &amp; Object.values(obj)"></a>2. Object.keys(obj) &amp; Object.values(obj)</h2><p>参数：</p>
-<p>obj为将要遍历其可枚举属性并返回数组的对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123;</span><br><span class="line">    id:1,</span><br><span class="line">    name:&apos;Abbott&apos;,</span><br><span class="line">    age:18</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">console.log(Object.keys(obj));</span><br><span class="line">console.log(Object.values(obj));</span><br></pre></td></tr></table></figure>
-
-<p>输出结果：</p>
-<pre><code>//obj的key组成的数组
-[&quot;id&quot;,&quot;name&quot;,&quot;age&quot;];
-
-//obj的value组成的数组
-[&quot;1&quot;,&quot;Abbott&quot;,&quot;18&quot;];</code></pre><h2 id="3-Object-getOwnPropertyNames-obj"><a href="#3-Object-getOwnPropertyNames-obj" class="headerlink" title="3. Object.getOwnPropertyNames(obj)"></a>3. Object.getOwnPropertyNames(obj)</h2><p>返回一个数组，包括obj中所有属性，包括不可枚举的。</p>
-<p>遍历Object.getOwnPropertyNames(obj)的返回值可获得key、value。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123; </span><br><span class="line">    id:1, </span><br><span class="line">    name:&apos;zhangsan&apos;, </span><br><span class="line">    age:18 </span><br><span class="line">&#125;;</span><br><span class="line">Object.getOwnPropertyNames(obj).forEach(function(key)&#123; </span><br><span class="line">    console.log(key+&apos;---&apos;+obj[key]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>输出结果：</p>
-<pre><code>id --- 1  
-name --- Abbott
 age --- 18</code></pre>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/22/遍历Object的几种方法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1552,7 +1670,7 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a</code></pre><bl
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
