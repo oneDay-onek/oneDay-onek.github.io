@@ -80,18 +80,18 @@
 
 
 
-<meta name="description" content="以下是主线程和任务队列的关系示意图： 123graph TBmainThread[主线程完成执行栈内的任务]--&amp;gt;check[检查任务队列里是否有可执行的事件]end    st=&amp;gt;start: Start op=&amp;gt;operation: Your Operation cond=&amp;gt;condition: Yes or No? e=&amp;gt;end st-&amp;gt;op-&amp;gt;cond cond(yes)-&amp;gt;e co">
+<meta name="description" content="以下是主线程和任务队列的关系示意图：  st=&amp;gt;start: 主线程上的同步任务执行栈执行完成 op=&amp;gt;operation: 检查任务队列中的事件 op1=&amp;gt;operation: 执行任务队列中的事件 cond=&amp;gt;condition: 任务队列中是否存在事件？ sub1=&amp;gt;subroutine: 事件队列  st-&amp;gt;op-&amp;gt;cond(no)-&amp;gt;op1-&amp;gt;op cond(yes)-&amp;gt;op opsub">
 <meta name="keywords" content="js基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js运行机制">
 <meta property="og:url" content="/2019/09/25/js运行机制/index.html">
 <meta property="og:site_name" content="K&#39;s 个人博客 2.0">
-<meta property="og:description" content="以下是主线程和任务队列的关系示意图： 123graph TBmainThread[主线程完成执行栈内的任务]--&amp;gt;check[检查任务队列里是否有可执行的事件]end    st=&amp;gt;start: Start op=&amp;gt;operation: Your Operation cond=&amp;gt;condition: Yes or No? e=&amp;gt;end st-&amp;gt;op-&amp;gt;cond cond(yes)-&amp;gt;e co">
+<meta property="og:description" content="以下是主线程和任务队列的关系示意图：  st=&amp;gt;start: 主线程上的同步任务执行栈执行完成 op=&amp;gt;operation: 检查任务队列中的事件 op1=&amp;gt;operation: 执行任务队列中的事件 cond=&amp;gt;condition: 任务队列中是否存在事件？ sub1=&amp;gt;subroutine: 事件队列  st-&amp;gt;op-&amp;gt;cond(no)-&amp;gt;op1-&amp;gt;op cond(yes)-&amp;gt;op opsub">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-25T02:22:51.263Z">
+<meta property="og:updated_time" content="2019-09-25T03:13:28.665Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js运行机制">
-<meta name="twitter:description" content="以下是主线程和任务队列的关系示意图： 123graph TBmainThread[主线程完成执行栈内的任务]--&amp;gt;check[检查任务队列里是否有可执行的事件]end    st=&amp;gt;start: Start op=&amp;gt;operation: Your Operation cond=&amp;gt;condition: Yes or No? e=&amp;gt;end st-&amp;gt;op-&amp;gt;cond cond(yes)-&amp;gt;e co">
+<meta name="twitter:description" content="以下是主线程和任务队列的关系示意图：  st=&amp;gt;start: 主线程上的同步任务执行栈执行完成 op=&amp;gt;operation: 检查任务队列中的事件 op1=&amp;gt;operation: 执行任务队列中的事件 cond=&amp;gt;condition: 任务队列中是否存在事件？ sub1=&amp;gt;subroutine: 事件队列  st-&amp;gt;op-&amp;gt;cond(no)-&amp;gt;op1-&amp;gt;op cond(yes)-&amp;gt;op opsub">
 
 
 
@@ -357,17 +357,16 @@
 
       
         <p><strong>以下是主线程和任务队列的关系示意图：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">mainThread[主线程完成执行栈内的任务]--&gt;check[检查任务队列里是否有可执行的事件]</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-
-
 <div id="flowchart-0" class="flow-chart"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Start
-op=>operation: Your Operation
-cond=>condition: Yes or No?
-e=>end
-st->op->cond
-cond(yes)->e
-cond(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 主线程上的同步任务执行栈执行完成
+op=>operation: 检查任务队列中的事件
+op1=>operation: 执行任务队列中的事件
+cond=>condition: 任务队列中是否存在事件？
+sub1=>subroutine: 事件队列
+
+st->op->cond(no)->op1->op
+cond(yes)->op
+op<->sub1</-></textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>
       
     </div>
     
