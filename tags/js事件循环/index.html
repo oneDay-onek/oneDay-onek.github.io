@@ -67,7 +67,7 @@
 
 
 
-  <meta name="keywords" content="js基础,js事件循环,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -80,18 +80,17 @@
 
 
 
-<meta name="description" content="以下是主线程和任务队列的关系示意图：  st=&amp;gt;start: 主线程上的同步任务执行栈执行完成 op=&amp;gt;operation: 检查任务队列中的事件 op1=&amp;gt;operation: 执行任务队列中的事件 cond=&amp;gt;condition: 任务队列中是否存在事件？ sub1=&amp;gt;subroutine: 事件队列  st-&amp;gt;op-&amp;gt;cond(no)-&amp;gt;op1-&amp;gt;op cond(yes)-&amp;gt;op op-&amp;gt;s">
-<meta name="keywords" content="js基础,js事件循环">
-<meta property="og:type" content="article">
-<meta property="og:title" content="js运行机制">
-<meta property="og:url" content="/2019/09/25/js运行机制/index.html">
+<meta name="description" content="个人,博客,个人博客,前端,vue,node,vue.js,node.js">
+<meta name="keywords" content="个人,博客,个人博客,前端,vue,node,vue.js,node.js">
+<meta property="og:type" content="website">
+<meta property="og:title" content="K&#39;s 个人博客 2.0">
+<meta property="og:url" content="/tags/js事件循环/index.html">
 <meta property="og:site_name" content="K&#39;s 个人博客 2.0">
-<meta property="og:description" content="以下是主线程和任务队列的关系示意图：  st=&amp;gt;start: 主线程上的同步任务执行栈执行完成 op=&amp;gt;operation: 检查任务队列中的事件 op1=&amp;gt;operation: 执行任务队列中的事件 cond=&amp;gt;condition: 任务队列中是否存在事件？ sub1=&amp;gt;subroutine: 事件队列  st-&amp;gt;op-&amp;gt;cond(no)-&amp;gt;op1-&amp;gt;op cond(yes)-&amp;gt;op op-&amp;gt;s">
+<meta property="og:description" content="个人,博客,个人博客,前端,vue,node,vue.js,node.js">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-25T03:14:40.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js运行机制">
-<meta name="twitter:description" content="以下是主线程和任务队列的关系示意图：  st=&amp;gt;start: 主线程上的同步任务执行栈执行完成 op=&amp;gt;operation: 检查任务队列中的事件 op1=&amp;gt;operation: 执行任务队列中的事件 cond=&amp;gt;condition: 任务队列中是否存在事件？ sub1=&amp;gt;subroutine: 事件队列  st-&amp;gt;op-&amp;gt;cond(no)-&amp;gt;op1-&amp;gt;op cond(yes)-&amp;gt;op op-&amp;gt;s">
+<meta name="twitter:title" content="K&#39;s 个人博客 2.0">
+<meta name="twitter:description" content="个人,博客,个人博客,前端,vue,node,vue.js,node.js">
 
 
 
@@ -121,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="/2019/09/25/js运行机制/">
+  <link rel="canonical" href="/tags/js事件循环/">
 
 
 
 
 
-  <title>js运行机制 | K's 个人博客 2.0</title>
+  <title>标签: js事件循环 | K's 个人博客 2.0</title>
   
 
 
@@ -146,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,163 +269,52 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>js事件循环<small>标签</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/2019/09/25/js运行机制/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bro.K">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/person_icon.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="K's 个人博客 2.0">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">js运行机制</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2019/09/25/js运行机制/" itemprop="url">
               
-                <span class="post-meta-item-text">发表于</span>
+                <span itemprop="name">js运行机制</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-25T10:20:45+08:00">
-                2019-09-25
-              </time>
-            
+            </a>
+        
+      </h2>
 
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-09-25T10:20:45+08:00" content="2019-09-25">
+          09-25
+        </time>
+      </div>
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span id="busuanzi_value_page_pv"></span>次阅读
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p><strong>以下是主线程和任务队列的关系示意图：</strong></p>
-<div id="flowchart-0" class="flow-chart"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 主线程上的同步任务执行栈执行完成
-op=>operation: 检查任务队列中的事件
-op1=>operation: 执行任务队列中的事件
-cond=>condition: 任务队列中是否存在事件？
-sub1=>subroutine: 事件队列
-
-st->op->cond(no)->op1->op
-cond(yes)->op
-op->sub1</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/js基础/" rel="tag"># js基础</a>
-          
-            <a href="/tags/js事件循环/" rel="tag"># js事件循环</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/09/23/vue父子组件之间传值/" rel="next" title="vue父子组件之间传值">
-                <i class="fa fa-chevron-left"></i> vue父子组件之间传值
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -434,10 +322,6 @@ op->sub1</textarea><textarea id="flowchart-0-options" style="display: none">{"sc
 
 
           
-
-  
-
-
 
         </div>
         
@@ -680,10 +564,6 @@ op->sub1</textarea><textarea id="flowchart-0-options" style="display: none">{"sc
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
