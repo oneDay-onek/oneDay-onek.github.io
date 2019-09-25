@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[js运行机制]]></title>
     <url>%2F2019%2F09%2F25%2Fjs%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%2F</url>
-    <content type="text"><![CDATA[以下是主线程和任务队列的关系示意图： 123graph TBmainThread[主线程完成执行栈内的任务]--&gt;check[检查任务队列里是否有可执行的事件]end 1234567st=&gt;start: Startop=&gt;operation: Your Operationcond=&gt;condition: Yes or No?e=&gt;endst-&gt;op-&gt;condcond(yes)-&gt;econd(no)-&gt;op]]></content>
+    <content type="text"><![CDATA[以下是主线程和任务队列的关系示意图： 123graph TBmainThread[主线程完成执行栈内的任务]--&gt;check[检查任务队列里是否有可执行的事件]end st=>start: Start op=>operation: Your Operation cond=>condition: Yes or No? e=>end st->op->cond cond(yes)->e cond(no)->op{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12} var code = document.getElementById("flowchart-0-code").value; var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value)); var diagram = flowchart.parse(code); diagram.drawSVG("flowchart-0", options);]]></content>
       <tags>
         <tag>js基础</tag>
       </tags>
@@ -97,8 +97,8 @@
         <category>js基础</category>
       </categories>
       <tags>
-        <tag>js基础</tag>
         <tag>js数组</tag>
+        <tag>js基础</tag>
       </tags>
   </entry>
 </search>
