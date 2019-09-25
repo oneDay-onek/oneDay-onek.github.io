@@ -80,18 +80,18 @@
 
 
 
-<meta name="description" content="js遍历Object的几种方法1. for……in123456789const obj = &amp;#123;    id:1,    name:&amp;apos;Abbott&amp;apos;,    age:18&amp;#125;;for(let key in obj)&amp;#123;    console.log(`$&amp;#123;key&amp;#125; --- $&amp;#123;obj[key]&amp;#125;`);&amp;#125;;">
+<meta name="description" content="js遍历Object的几种方法1. for……infor…in循环不仅会遍历可枚举属性，还会遍历原型链上的属性。 123456789const obj = &amp;#123;    id:1,    name:&amp;apos;Abbott&amp;apos;,    age:18&amp;#125;;for(let key in obj)&amp;#123;    console.log(`$&amp;#123;key&amp;#125; ---">
 <meta name="keywords" content="js基础,js遍历Object">
 <meta property="og:type" content="article">
 <meta property="og:title" content="遍历Object的几种方法">
 <meta property="og:url" content="/2019/09/22/遍历Object的几种方法/index.html">
 <meta property="og:site_name" content="K&#39;s 个人博客 2.0">
-<meta property="og:description" content="js遍历Object的几种方法1. for……in123456789const obj = &amp;#123;    id:1,    name:&amp;apos;Abbott&amp;apos;,    age:18&amp;#125;;for(let key in obj)&amp;#123;    console.log(`$&amp;#123;key&amp;#125; --- $&amp;#123;obj[key]&amp;#125;`);&amp;#125;;">
+<meta property="og:description" content="js遍历Object的几种方法1. for……infor…in循环不仅会遍历可枚举属性，还会遍历原型链上的属性。 123456789const obj = &amp;#123;    id:1,    name:&amp;apos;Abbott&amp;apos;,    age:18&amp;#125;;for(let key in obj)&amp;#123;    console.log(`$&amp;#123;key&amp;#125; ---">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-25T02:20:16.780Z">
+<meta property="og:updated_time" content="2019-09-25T10:05:24.282Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="遍历Object的几种方法">
-<meta name="twitter:description" content="js遍历Object的几种方法1. for……in123456789const obj = &amp;#123;    id:1,    name:&amp;apos;Abbott&amp;apos;,    age:18&amp;#125;;for(let key in obj)&amp;#123;    console.log(`$&amp;#123;key&amp;#125; --- $&amp;#123;obj[key]&amp;#125;`);&amp;#125;;">
+<meta name="twitter:description" content="js遍历Object的几种方法1. for……infor…in循环不仅会遍历可枚举属性，还会遍历原型链上的属性。 123456789const obj = &amp;#123;    id:1,    name:&amp;apos;Abbott&amp;apos;,    age:18&amp;#125;;for(let key in obj)&amp;#123;    console.log(`$&amp;#123;key&amp;#125; ---">
 
 
 
@@ -378,7 +378,8 @@
       
 
       
-        <h1 id="js遍历Object的几种方法"><a href="#js遍历Object的几种方法" class="headerlink" title="js遍历Object的几种方法"></a>js遍历Object的几种方法</h1><h2 id="1-for……in"><a href="#1-for……in" class="headerlink" title="1. for……in"></a>1. for……in</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123;</span><br><span class="line">    id:1,</span><br><span class="line">    name:&apos;Abbott&apos;,</span><br><span class="line">    age:18</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">for(let key in obj)&#123;</span><br><span class="line">    console.log(`$&#123;key&#125; --- $&#123;obj[key]&#125;`);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h1 id="js遍历Object的几种方法"><a href="#js遍历Object的几种方法" class="headerlink" title="js遍历Object的几种方法"></a>js遍历Object的几种方法</h1><h2 id="1-for……in"><a href="#1-for……in" class="headerlink" title="1. for……in"></a>1. for……in</h2><p>for…in循环不仅会遍历可枚举属性，还会遍历原型链上的属性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123;</span><br><span class="line">    id:1,</span><br><span class="line">    name:&apos;Abbott&apos;,</span><br><span class="line">    age:18</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">for(let key in obj)&#123;</span><br><span class="line">    console.log(`$&#123;key&#125; --- $&#123;obj[key]&#125;`);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <p>输出结果为： </p>
 <pre><code>id --- 1  
@@ -401,7 +402,37 @@ age --- 18</code></pre><a id="more"></a>
 <p>输出结果：</p>
 <pre><code>id --- 1  
 name --- Abbott
-age --- 18</code></pre>
+age --- 18</code></pre><h3 id="4-Object-entries-obj"><a href="#4-Object-entries-obj" class="headerlink" title="4. Object.entries(obj)"></a>4. Object.entries(obj)</h3><p>返回一个给定对象自身可枚举属性的键值对。</p>
+<p>例1 传入对象</p>
+<pre><code>var obj = {a: &apos;b&apos;,c: &apos;d&apos;};
+console.log(Object.entries(obj));
+// =&gt; [[&apos;a&apos;,&apos;b&apos;],[&apos;c&apos;,&apos;d&apos;]]</code></pre><p>例2.1 传入数组</p>
+<pre><code>var obj = [1,2,3];
+console.log(Object.entries(obj));
+// =&gt; [[&apos;0&apos;,&apos;1&apos;],[&apos;1&apos;,&apos;2&apos;],[&apos;2&apos;,&apos;3&apos;]]</code></pre><p>例2.2 传入包含对象的数组</p>
+<pre><code>var obj = [{a:&apos;b&apos;},2,3];
+console.log(Onject.entries(obj));
+// =&gt; [[&apos;0&apos;,{a:&apos;b&apos;}],[&apos;1&apos;,&apos;2&apos;],[&apos;2&apos;,&apos;3&apos;]</code></pre><p>例3 传入字符串</p>
+<pre><code>var str = &apos;abc&apos;;
+console.log(Object.entries(str));
+// =&gt; [[&apos;0&apos;,&apos;a&apos;],[&apos;1&apos;,&apos;b&apos;],[&apos;2&apos;,&apos;c&apos;]]</code></pre><p>例4 传入整数、浮点数</p>
+<pre><code>var intNum = 12;
+console.log(Object.entries(intNum));
+// =&gt; []
+
+var floatNum = 11.22;
+console.log(Object.entries(floatNum));
+// =&gt; []</code></pre><h3 id="5-for…of"><a href="#5-for…of" class="headerlink" title="5. for…of"></a>5. for…of</h3><p>for…of 语句创建一个循环来迭代可迭代的对象。在 ES6 中引入的 for…of 循环，以替代 for…in 和 forEach() ，并支持新的迭代协议。for…of 允许你遍历 Arrays（数组）, Strings（字符串）, Maps（映射）, Sets（集合）等可迭代的数据结构等。</p>
+<h5 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h5><pre><code>for (variable of iterable) {
+    ...
+}</code></pre><ul>
+<li>variable: 每个迭代的属性值被分配给的变量。</li>
+<li>iterable: 一个具有可枚举属性并且可以迭代的对象。</li>
+</ul>
+<p>这是一个特殊的遍历方法，用于特殊的集合（数组、对象），但不包括普通的对象。</p>
+<p>特殊集合的特殊之处在于其具有Symbol.iterator属性。</p>
+<p>Symbol是ES6出现的一个基本数据类型，用来作为唯一标识。Symbol.iterator属性可以为一个对象定义for…of在该对象上的行为（理解为定义了一个可索引对属性），即对该对象使用for…of时会正常进行遍历</p>
+
       
     </div>
     
@@ -524,7 +555,7 @@ age --- 18</code></pre>
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -586,7 +617,7 @@ age --- 18</code></pre>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js遍历Object的几种方法"><span class="nav-text">js遍历Object的几种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-for……in"><span class="nav-text">1. for……in</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Object-keys-obj-amp-Object-values-obj"><span class="nav-text">2. Object.keys(obj) &amp; Object.values(obj)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Object-getOwnPropertyNames-obj"><span class="nav-text">3. Object.getOwnPropertyNames(obj)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js遍历Object的几种方法"><span class="nav-text">js遍历Object的几种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-for……in"><span class="nav-text">1. for……in</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Object-keys-obj-amp-Object-values-obj"><span class="nav-text">2. Object.keys(obj) &amp; Object.values(obj)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Object-getOwnPropertyNames-obj"><span class="nav-text">3. Object.getOwnPropertyNames(obj)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Object-entries-obj"><span class="nav-text">4. Object.entries(obj)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-for…of"><span class="nav-text">5. for…of</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#语法"><span class="nav-text">语法</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
