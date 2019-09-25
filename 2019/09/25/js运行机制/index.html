@@ -80,18 +80,18 @@
 
 
 
-<meta name="description" content="以下是主线程和任务队列的关系示意图：  st=&amp;gt;start: 主线程上的同步任务执行栈执行完成 op=&amp;gt;operation: 检查任务队列中的事件 op1=&amp;gt;operation: 执行任务队列中的事件 cond=&amp;gt;condition: 任务队列中是否存在事件？ sub1=&amp;gt;subroutine: 事件队列  st-&amp;gt;op-&amp;gt;cond(no)-&amp;gt;op1-&amp;gt;op cond(yes)-&amp;gt;op op{&quot;s">
+<meta name="description" content="以下是主线程和任务队列的关系示意图：  st=&amp;gt;start: 主线程上的同步任务执行栈执行完成 op=&amp;gt;operation: 检查任务队列中的事件 op1=&amp;gt;operation: 执行任务队列中的事件 cond=&amp;gt;condition: 任务队列中是否存在事件？ sub=&amp;gt;subroutine: 事件队列  st-&amp;gt;op-&amp;gt;cond(no) cond(no)-&amp;gt;op1-&amp;gt;op cond(yes)-&amp;gt;">
 <meta name="keywords" content="js基础,js事件循环">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js运行机制">
 <meta property="og:url" content="/2019/09/25/js运行机制/index.html">
 <meta property="og:site_name" content="K&#39;s 个人博客 2.0">
-<meta property="og:description" content="以下是主线程和任务队列的关系示意图：  st=&amp;gt;start: 主线程上的同步任务执行栈执行完成 op=&amp;gt;operation: 检查任务队列中的事件 op1=&amp;gt;operation: 执行任务队列中的事件 cond=&amp;gt;condition: 任务队列中是否存在事件？ sub1=&amp;gt;subroutine: 事件队列  st-&amp;gt;op-&amp;gt;cond(no)-&amp;gt;op1-&amp;gt;op cond(yes)-&amp;gt;op op{&quot;s">
+<meta property="og:description" content="以下是主线程和任务队列的关系示意图：  st=&amp;gt;start: 主线程上的同步任务执行栈执行完成 op=&amp;gt;operation: 检查任务队列中的事件 op1=&amp;gt;operation: 执行任务队列中的事件 cond=&amp;gt;condition: 任务队列中是否存在事件？ sub=&amp;gt;subroutine: 事件队列  st-&amp;gt;op-&amp;gt;cond(no) cond(no)-&amp;gt;op1-&amp;gt;op cond(yes)-&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-25T03:15:56.973Z">
+<meta property="og:updated_time" content="2019-09-25T03:18:30.272Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js运行机制">
-<meta name="twitter:description" content="以下是主线程和任务队列的关系示意图：  st=&amp;gt;start: 主线程上的同步任务执行栈执行完成 op=&amp;gt;operation: 检查任务队列中的事件 op1=&amp;gt;operation: 执行任务队列中的事件 cond=&amp;gt;condition: 任务队列中是否存在事件？ sub1=&amp;gt;subroutine: 事件队列  st-&amp;gt;op-&amp;gt;cond(no)-&amp;gt;op1-&amp;gt;op cond(yes)-&amp;gt;op op{&quot;s">
+<meta name="twitter:description" content="以下是主线程和任务队列的关系示意图：  st=&amp;gt;start: 主线程上的同步任务执行栈执行完成 op=&amp;gt;operation: 检查任务队列中的事件 op1=&amp;gt;operation: 执行任务队列中的事件 cond=&amp;gt;condition: 任务队列中是否存在事件？ sub=&amp;gt;subroutine: 事件队列  st-&amp;gt;op-&amp;gt;cond(no) cond(no)-&amp;gt;op1-&amp;gt;op cond(yes)-&amp;gt;">
 
 
 
@@ -362,11 +362,12 @@
 op=>operation: 检查任务队列中的事件
 op1=>operation: 执行任务队列中的事件
 cond=>condition: 任务队列中是否存在事件？
-sub1=>subroutine: 事件队列
+sub=>subroutine: 事件队列
 
-st->op->cond(no)->op1->op
+st->op->cond(no)
+cond(no)->op1->op
 cond(yes)->op
-op<-sub1< textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></-sub1<></textarea>
+sub->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>
       
     </div>
     
