@@ -294,9 +294,9 @@ b = 2；      //a:1,b:2   即使改变b的值，也不会影响a&lt;/code&gt;&lt
       <category term="js基础" scheme="/categories/js%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
-    
       <category term="js数组" scheme="/tags/js%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="js基础" scheme="/tags/js%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
