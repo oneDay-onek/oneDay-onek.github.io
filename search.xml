@@ -4,13 +4,27 @@
   
     
     <entry>
-      <title>css中的@规则</title>
-      <link href="/2019/09/25/css-%E8%A7%84%E5%88%99/"/>
-      <url>/2019/09/25/css-%E8%A7%84%E5%88%99/</url>
+      <title>js中的Class</title>
+      <link href="/2019/09/25/js%E4%B8%AD%E7%9A%84Class/"/>
+      <url>/2019/09/25/js%E4%B8%AD%E7%9A%84Class/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="js中的Class"><a href="#js中的Class" class="headerlink" title="js中的Class"></a>js中的Class</h1><p>接触过</p>]]></content>
       
       
+      <categories>
+          
+          <category> ES6 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js Class </tag>
+            
+            <tag> ES6 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -237,9 +251,9 @@
       
         <tags>
             
-            <tag> js数组 </tag>
-            
             <tag> js基础 </tag>
+            
+            <tag> js数组 </tag>
             
         </tags>
       

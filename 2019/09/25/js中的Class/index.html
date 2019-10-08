@@ -67,7 +67,7 @@
 
 
 
-  <meta name="keywords" content="js基础,js数组,">
+  <meta name="keywords" content="js Class,ES6,">
 
 
 
@@ -80,18 +80,18 @@
 
 
 
-<meta name="description" content="本文主要介绍js中对数组和字符串的基本操作  一. 数组操作   概念  数组操作分为两类:  会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();  不会改变原数组的方法: .concat(), .slice(), .join()。   1）改变原数组的操作push()push()方法">
-<meta name="keywords" content="js基础,js数组">
+<meta name="description" content="js中的Class接触过">
+<meta name="keywords" content="js Class,ES6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Js对数组的一些操作方法">
-<meta property="og:url" content="/2019/09/05/Js Array and String/index.html">
+<meta property="og:title" content="js中的Class">
+<meta property="og:url" content="/2019/09/25/js中的Class/index.html">
 <meta property="og:site_name" content="K&#39;s 个人博客 2.0">
-<meta property="og:description" content="本文主要介绍js中对数组和字符串的基本操作  一. 数组操作   概念  数组操作分为两类:  会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();  不会改变原数组的方法: .concat(), .slice(), .join()。   1）改变原数组的操作push()push()方法">
+<meta property="og:description" content="js中的Class接触过">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-22T07:53:07.314Z">
+<meta property="og:updated_time" content="2019-09-25T10:19:36.988Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Js对数组的一些操作方法">
-<meta name="twitter:description" content="本文主要介绍js中对数组和字符串的基本操作  一. 数组操作   概念  数组操作分为两类:  会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();  不会改变原数组的方法: .concat(), .slice(), .join()。   1）改变原数组的操作push()push()方法">
+<meta name="twitter:title" content="js中的Class">
+<meta name="twitter:description" content="js中的Class接触过">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="/2019/09/05/Js Array and String/">
+  <link rel="canonical" href="/2019/09/25/js中的Class/">
 
 
 
 
 
-  <title>Js对数组的一些操作方法 | K's 个人博客 2.0</title>
+  <title>js中的Class | K's 个人博客 2.0</title>
   
 
 
@@ -284,7 +284,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/2019/09/05/Js Array and String/">
+    <link itemprop="mainEntityOfPage" href="/2019/09/25/js中的Class/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bro.K">
@@ -301,7 +301,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Js对数组的一些操作方法</h1>
+          <h1 class="post-title" itemprop="name headline">js中的Class</h1>
         
 
         <div class="post-meta">
@@ -313,8 +313,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-05T22:57:53+08:00">
-                2019-09-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-25T18:18:29+08:00">
+                2019-09-25
               </time>
             
 
@@ -336,8 +336,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js基础/" itemprop="url" rel="index">
-                    <span itemprop="name">js基础</span>
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
                   </a>
                 </span>
 
@@ -378,106 +378,7 @@
       
 
       
-        <blockquote>
-<p>本文主要介绍js中对数组和字符串的基本操作</p>
-</blockquote>
-<h2 id="一-数组操作"><a href="#一-数组操作" class="headerlink" title="一. 数组操作"></a>一. 数组操作</h2><blockquote>
-<p>  概念</p>
-</blockquote>
-<p>数组操作分为两类:</p>
-<ol>
-<li><p>会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();</p>
-</li>
-<li><p>不会改变原数组的方法: .concat(), .slice(), .join()。</p>
-</li>
-</ol>
-<h2 id="1）改变原数组的操作"><a href="#1）改变原数组的操作" class="headerlink" title="1）改变原数组的操作"></a>1）改变原数组的操作</h2><h3 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h3><p>push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。</p>
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line">arr.push([<span class="number">7</span>,<span class="number">8</span>]);  <span class="comment">//arr:[1,2,3,4,5,6,[7,8]]</span></span><br><span class="line">                  <span class="comment">//如果插入的为数组，则插入的这个数组成为arr的最后一项</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.push(<span class="number">9</span>,<span class="number">10</span>);   <span class="comment">//arr:[1,2,3,4,5,6,[7,8],9,10]</span></span><br><span class="line">                              <span class="comment">//count:9  ==  返回值为改变后数组的长度</span></span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
-
-<h3 id="pop"><a href="#pop" class="headerlink" title="pop()"></a>pop()</h3><p>pop()方法用于删除数组的最后一个元素，并返回被删除的元素。</p>
-<h4 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = arr.pop();   <span class="comment">//arr:[1,2,3,4,5]</span></span><br><span class="line">                        <span class="comment">//item:6  ==  返回值为被删除的元素</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="shift"><a href="#shift" class="headerlink" title="shift()"></a>shift()</h3><p>shif()方法用于把数组的第一个元素从其中删除，并返回第一个元素的值.</p>
-<h4 id="例子-2"><a href="#例子-2" class="headerlink" title="例子"></a>例子</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = arr.shift();     <span class="comment">//arr:[2,3,4,5,6]</span></span><br><span class="line">                            <span class="comment">//item:1  ==  返回值为被删除的元素</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="unshift"><a href="#unshift" class="headerlink" title="unshift()"></a>unshift()</h3><p>unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度.</p>
-<h4 id="例子-3"><a href="#例子-3" class="headerlink" title="例子"></a>例子</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.unshift(<span class="number">1</span>,<span class="number">2</span>);   <span class="comment">//arr:[1,2,1,2,3,4,5,6]</span></span><br><span class="line">                                <span class="comment">//count:8   ==  返回数组的长度</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = arr.unshift([<span class="number">1</span>,<span class="number">2</span>]);     <span class="comment">//arr:[[1,2],1,2,1,2,3,4,5,6]</span></span><br><span class="line">                                    <span class="comment">//count:9</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="splice"><a href="#splice" class="headerlink" title="splice()"></a>splice()</h3><p>splice() 方法向数组中添加项目(或 向数组中添加项目)，然后返回被删除的项目，返回值为数组。</p>
-<p><strong>一句话概括一下：此方法不是单纯的添加或者删除数组中的项，更像是更改数组。从索引为index的项开始（包括index项）往后面找个数length的项，将他们替换为item1…itemX</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：arrayObject.splice(index,length,item1,.....,itemX)</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="center">参数</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">index</td>
-<td align="center">必填。规定添加（删除）的位置。即从索引为index的项为起点。如果为负数则从倒数项开始。</td>
-</tr>
-<tr>
-<td align="center">length</td>
-<td align="center">必填。规定删除的项的个数，如果为0则不删除。</td>
-</tr>
-<tr>
-<td align="center">item1…itemX</td>
-<td align="center">选填。规定添加的项。如果有item1…itemX，则不论是否删除，item1…itemX都会添加到数组。</td>
-</tr>
-</tbody></table>
-<h4 id="例子-4"><a href="#例子-4" class="headerlink" title="例子"></a>例子</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,4,5,6];</span><br><span class="line"></span><br><span class="line">var items = arr.splice(5,1);   //arr:[1,2,3,4,5]    此用法表现为删除操作</span><br><span class="line">                                //items:[6]     返回被删除的项</span><br><span class="line"></span><br><span class="line">var items = arr.splice(4,1,7,8,9);     //arr:[1,2,3,4,7,8,9]    此用法表现为更改操作。从第index为4的项开始的1项删除，并插入 7，8，9</span><br><span class="line">                                    //count:[5]     返回被删除的项</span><br></pre></td></tr></table></figure>
-
-<h3 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h3><p>reverse() 方法用于颠倒数组中元素的顺序，无返回值。</p>
-<h4 id="例子-5"><a href="#例子-5" class="headerlink" title="例子"></a>例子</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [a,b,c,d];</span><br><span class="line"></span><br><span class="line">arr.reverse();   <span class="comment">//arr:[d,c,b,a]</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h3><p>sort() 方法用于对数组的元素进行排序，无返回值。</p>
-<h4 id="例子-6"><a href="#例子-6" class="headerlink" title="例子"></a>例子</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line">arr.sort();   <span class="comment">//arr:[1,2,3,4,5]     完成排序</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//但是注意，该方法仅用于对数组项为单纯数字的数组进行排序，如果数组的项为字符串，结果可能不为预期</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> strArr = [<span class="string">'1'</span>,<span class="string">'12'</span>,<span class="string">'2'</span>,<span class="string">'5'</span>,<span class="string">'300'</span>];</span><br><span class="line"></span><br><span class="line">strArr.sort();      <span class="comment">//strArr:['1','12','2','300','5']</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="2）不会改变原数组的操作"><a href="#2）不会改变原数组的操作" class="headerlink" title="2）不会改变原数组的操作"></a>2）不会改变原数组的操作</h2><h3 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h3><p>concat() 方法用于两个或多个数组的拼接,返回值为拼接后的新数组。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法： arr1.concat(arr2,arr3...arrX);  其中arr2...arrX可以是具体的项</span><br></pre></td></tr></table></figure>
-
-<h4 id="例子-7"><a href="#例子-7" class="headerlink" title="例子"></a>例子</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr2 = arr1.concat(<span class="number">4</span>,<span class="number">5</span>);    <span class="comment">//arr2 = [1,2,3,4,5]</span></span><br><span class="line"><span class="keyword">var</span> arr3 = arr1.concat([<span class="number">4</span>,<span class="number">5</span>]);  <span class="comment">//arr3 = [1,2,3,4,5]</span></span><br><span class="line">                                <span class="comment">//arr1 = [1,2,3]    --    不改变原数组</span></span><br></pre></td></tr></table></figure>
-
-<p>&nbsp;&nbsp; 以上两个操作拼接的为不同对象，但结果是一样的，由此看出concat()方法返回值有且只有一个数组。如果传入参数为数组，会将数组的每个项拆分再进行拼接操作。</p>
-<blockquote>
-<p><strong>*tips</strong>:因concat()不会改变任何数组就能复制出一个与原数组一摸一样的数组，所以多用来对数组进行深拷贝操作</p>
-</blockquote>
-<pre><code>var arr1 = [1,2,3];
-var arr2 = [].concat(arr1);     //将arr1的值与空数组拼接，意在将arr1的值复制一份。</code></pre><h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><p>slice() 方法用于返回一个数组的选定元素,并存放在一个新数组中。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法： arr.slice(start,end);</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="center">参数</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">start</td>
-<td align="center">必填。用来指定选取的起点，从索引为start的项开始。</td>
-</tr>
-<tr>
-<td align="center">end</td>
-<td align="center">选填。用来指定选取的终点，选取到索引为end的项的前一项，不包括索引为end的项本身。如不填，则选取到数组的最后一位。</td>
-</tr>
-</tbody></table>
-<h4 id="例子-8"><a href="#例子-8" class="headerlink" title="例子"></a>例子</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1,2,3,4,5,6];</span><br><span class="line"></span><br><span class="line">var arr2 = arr1.slice(1);</span><br><span class="line">//arr2:[2,3,4,5,6]</span><br><span class="line">var arr3 = arr1.slice(2,4);</span><br><span class="line">//arr3 = [3,4]</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-字符串操作"><a href="#2-字符串操作" class="headerlink" title="2. 字符串操作"></a>2. 字符串操作</h2><blockquote>
-<p>  概念</p>
-</blockquote>
-<p>数组操作分为两类:</p>
-<ol>
-<li><p>会改变原数组的方法: .push(), .pop(), .shift(), .unshift(), .splice(), .reverse(), .sort();</p>
-</li>
-<li><p>不会改变原数组的方法: .concat(), .slice()。</p>
-</li>
-</ol>
+        <h1 id="js中的Class"><a href="#js中的Class" class="headerlink" title="js中的Class"></a>js中的Class</h1><p>接触过</p>
 
       
     </div>
@@ -495,9 +396,9 @@ var arr2 = [].concat(arr1);     //将arr1的值与空数组拼接，意在将arr
       
         <div class="post-tags">
           
-            <a href="/tags/js基础/" rel="tag"># js基础</a>
+            <a href="/tags/js-Class/" rel="tag"># js Class</a>
           
-            <a href="/tags/js数组/" rel="tag"># js数组</a>
+            <a href="/tags/ES6/" rel="tag"># ES6</a>
           
         </div>
       
@@ -510,15 +411,15 @@ var arr2 = [].concat(arr1);     //将arr1的值与空数组拼接，意在将arr
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/09/25/js运行机制/" rel="next" title="js运行机制">
+                <i class="fa fa-chevron-left"></i> js运行机制
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/09/copy/" rel="prev" title="js中变量的深浅拷贝">
-                js中变量的深浅拷贝 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -659,7 +560,7 @@ var arr2 = [].concat(arr1);     //将arr1的值与空数组拼接，意在将arr
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-数组操作"><span class="nav-text">一. 数组操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1）改变原数组的操作"><span class="nav-text">1）改变原数组的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#push"><span class="nav-text">push()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pop"><span class="nav-text">pop()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-1"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shift"><span class="nav-text">shift()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-2"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unshift"><span class="nav-text">unshift()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-3"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#splice"><span class="nav-text">splice()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-4"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse"><span class="nav-text">reverse()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-5"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-text">sort()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-6"><span class="nav-text">例子</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2）不会改变原数组的操作"><span class="nav-text">2）不会改变原数组的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#concat"><span class="nav-text">concat()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-7"><span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#slice"><span class="nav-text">slice()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例子-8"><span class="nav-text">例子</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-字符串操作"><span class="nav-text">2. 字符串操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js中的Class"><span class="nav-text">js中的Class</span></a></li></ol></div>
             
 
           </div>
