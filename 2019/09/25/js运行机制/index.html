@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="K&#39;s 个人博客 2.0">
 <meta property="og:description" content="JS的宏任务和微任务 =&amp;gt;同步异步、主线程（执行栈）-事件队列、事件循环 Js的运行机制一、Js为单线程应用js的用途决定了它是单线程。Js作为一个浏览器脚本语言，主要对用户交互和处理页面DOM负责。而如果Js是个多线程语言，将会造成很复杂的影响，在一篇博文中看到的原话是会有很复杂的同步问题，一点就懂。比如有两个线程，其中一个线程在修改一个DOM元素，另一个线程要删除该DOM元素，浏览器此时">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-25T07:25:32.800Z">
+<meta property="og:updated_time" content="2020-03-10T09:26:25.268Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js运行机制">
 <meta name="twitter:description" content="JS的宏任务和微任务 =&amp;gt;同步异步、主线程（执行栈）-事件队列、事件循环 Js的运行机制一、Js为单线程应用js的用途决定了它是单线程。Js作为一个浏览器脚本语言，主要对用户交互和处理页面DOM负责。而如果Js是个多线程语言，将会造成很复杂的影响，在一篇博文中看到的原话是会有很复杂的同步问题，一点就懂。比如有两个线程，其中一个线程在修改一个DOM元素，另一个线程要删除该DOM元素，浏览器此时">
@@ -363,6 +363,8 @@
 <blockquote>
 <p>为了利用多核cpu的计算能力，HTML5提出Web Worker标准，允许js脚本创建多个线程，但是子线程完全受主线程控制，且不得操作DOM，所有新标准并没有改变js单线程的本质。 想了解web worker可移步至廖雪峰老师的文章<a href="http://www.ruanyifeng.com/blog/2018/07/web-worker.html" target="_blank" rel="noopener">《web worker使用教程》</a></p>
 </blockquote>
+<a id="more"></a>
+
 <h1 id="二、任务队列"><a href="#二、任务队列" class="headerlink" title="二、任务队列"></a>二、任务队列</h1><p>单线程意味着任务只能一件一件去执行，如果遇到一个耗时较长的任务，排在后面的任务只能等待其完成再执行。由此出现了<code>同步任务</code>和<code>异步任务</code>，同步任务是指主线程上的任务只有当前一个任务执行完毕，后一个任务才会执行；异步任务是指不进入主线程而进入任务队列的任务，当异步任务结束后会将一个事件放进异步的队列。</p>
 <p>当主线程里的同步任务都执行完后，会去异步的任务队列中按顺序执行异步任务添加的事件，也就是回调函数。如此反复，便形成了<code>事件循环</code>。（进入任务队列的都是回调函数）</p>
 <p><strong>以下是主线程和任务队列的关系示意图：</strong></p>
@@ -439,7 +441,7 @@ sub->op</textarea><textarea id="flowchart-0-options" style="display: none">{"sca
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/09/25/js中的Class/" rel="prev" title="js中的Class">
+              <a href="/2019/09/25/初识ts/" rel="prev" title="js中的Class">
                 js中的Class <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -531,7 +533,7 @@ sub->op</textarea><textarea id="flowchart-0-options" style="display: none">{"sca
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -542,7 +544,7 @@ sub->op</textarea><textarea id="flowchart-0-options" style="display: none">{"sca
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
